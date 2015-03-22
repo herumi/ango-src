@@ -1,0 +1,13 @@
+_*.tex
+*.blg
+*.aux
+*.idx
+*.ilg
+*.ind
+*.log
+*.toc
+*.dvi
+*.out
+*.bbl
+img/*.pdf
+img/*.xbb
