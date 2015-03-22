@@ -1,0 +1,95 @@
+\documentclass[b5j,final,openany]{jsbook}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage[dvipdfmx]{pxjahyper}
+\hypersetup{
+    colorlinks=true,
+    bookmarks=true,
+    bookmarksnumbered=false,
+    pdfborder={0,0,0},
+    bookmarkstype=toc,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black,
+}
+\usepackage[dvipdfmx]{color}
+\usepackage[dvipdfmx,final]{graphicx}
+%\usepackage{atbegshi}
+\usepackage{amsmath,amssymb}
+\usepackage{latexsym}
+\usepackage{float}
+\usepackage{bm}
+\usepackage{makeidx}
+\usepackage{ascmac}
+\usepackage{braket}
+\usepackage{stmaryrd}
+\usepackage{url}
+
+
+\makeindex
+
+\include{notation}
+\title{ƒNƒ‰ƒEƒh‚ğx‚¦‚é‚±‚ê‚©‚ç‚ÌˆÃ†‹Zp}
+\author{Œõ¬ ¶}
+\setlength{\textwidth}{\fullwidth}
+\setlength{\evensidemargin}{\oddsidemargin}
+\begin{document}
+\maketitle
+
+\pagenumbering{roman}
+\setcounter{tocdepth}{2}
+\tableofcontents
+\include{_intro}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\part{ˆÃ†‚ÌŠî‘b}
+\label{part:base}
+\include{_secret}
+\include{_rand}
+\include{_public}
+\include{_hash}
+\include{_elliptic}
+\include{_group}
+
+\part{V‚µ‚¢ˆÃ†‹Zp}
+\label{part:new}
+\include{_pairing}
+\include{_search}
+\include{_proxy}
+\include{_broadcast}
+\include{_abe}
+\include{_fe}
+\include{_homo}
+\include{_zero}
+\include{_assumption}
+
+\part{”Šw“I‚È‚Í‚È‚µ}
+\label{part:math}
+\include{_field_math}
+\include{_ec_math}
+\include{_pairing_math}
+
+\appendix
+% ‚µ‚¨‚è‚ÅƒCƒ“ƒfƒ“ƒg‚ğ¶‚Éˆê‚Â‚¸‚ç‚·
+\makeatletter
+\def\toclevel@chapter{-1}
+\def\toclevel@section{0}
+\makeatother
+
+% •t˜^A
+% A.1
+% A.2
+%\markright{•t˜^}
+%\addcontentsline{toc}{part}{•t˜^}
+%\setcounter{page}{1}
+%\renewcommand{\thesection}{A.\arabic{section}}
+
+\include{_appendix}
+
+\bibliographystyle{jalpha}
+\bibliography{ref}
+
+\phantomsection % ‚µ‚¨‚è‚Åõˆø‚ÉƒWƒƒƒ“ƒv‚·‚é
+\printindex
+
+\end{document}
