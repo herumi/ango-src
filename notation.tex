@@ -1,0 +1,67 @@
+\newcommand{\bvec}[1]{\mbox{\boldmath $#1$}}
+\newcommand{\trans}[1]{{#1}^{\bm{T}}}
+\newcommand{\dif}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\diff}[2]{\frac{\partial #2}{\partial #1}}
+
+\newcommand{\ddif}[2]{\frac{\partial^2}{\partial #1 \partial #2}}
+\newcommand{\ddiff}[3]{\frac{\partial^2 #3}{\partial #1 \partial #2}}
+\newcommand{\makeop}[1]{\mathop{\mathrm{#1}}\nolimits}
+\newcommand{\sgn}{\makeop{sgn}}
+\newcommand{\Enc}{\makeop{Enc}}
+\newcommand{\Dec}{\makeop{Dec}}
+\newcommand{\Add}{\makeop{Add}}
+\newcommand{\Mul}{\makeop{Mul}}
+\newcommand{\KGen}{\makeop{KeyGen}}
+\newcommand{\REnc}{\makeop{ReEnc}}
+\newcommand{\Sign}{\makeop{Sign}}
+\newcommand{\Blind}{\makeop{Blind}}
+\newcommand{\Unblind}{\makeop{Unblind}}
+\newcommand{\Char}{\makeop{char}}
+\newcommand{\PEKS}{\makeop{PEKS}}
+\newcommand{\Div}{\makeop{div}}
+\newcommand{\Trapdoor}{\makeop{Trapdoor}}
+\newcommand{\MAC}{{\cal{M}}}
+\newcommand{\HMAC}{{\cal{H}}}
+\newcommand{\outp}[1]{{{#1} \trans{{#1}}}}
+\newcommand{\inp}[1]{{\trans{{#1}}}{#1}}
+\newcommand{\vpi}{\bm{\pi}}
+\newcommand{\vecx}{\vec{x}}
+\newcommand{\vecy}{\vec{y}}
+\newcommand{\vvec}[2]{\begin{pmatrix} #1 \\ #2 \end{pmatrix}}
+\newcommand{\vvvec}[3]{\begin{pmatrix} #1 \\ #2 \\ #3 \end{pmatrix}}
+\newcommand{\hvec}[2]{\begin{pmatrix} #1 & #2 \end{pmatrix}}
+\newcommand{\matt}[4]{\begin{pmatrix} #1 & #2 \\ #3 & #4 \end{pmatrix}}
+\newcommand{\mattt}[9]{\begin{pmatrix} #1 & #2 & #3 \\ #4 & #5 & #6 \\ #7 & #8 & #9 \end{pmatrix}}
+\newcommand{\dett}[4]{\begin{vmatrix} #1 & #2 \\ #3 & #4 \end{vmatrix}}
+\newcommand{\lmatt}[4]{\begin{pmatrix} #1 & \ldots & #2 \\ \vdots & \ddots & \vdots \\ #3 & \ldots & #4 \end{pmatrix}}
+\newcommand{\quadf}[2]{\trans{\bm{#2}} #1 \bm{#2}}
+\newcommand{\quads}[2]{\trans{#2} #1 {#2}}
+\newcommand{\ord}[2]{\makeop{ord}_{#1}(#2)}
+\newcommand{\bolA}{\mathbb{A}}
+\newcommand{\bolB}{\mathbb{B}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{R}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\PhiT}{\trans{\Phi}}
+\newcommand{\calN}{{\cal N}}
+\newcommand{\calD}{{\cal D}}
+\newcommand{\calL}{{\cal L}}
+\newcommand{\calQ}{{\cal Q}}
+\newcommand{\calW}{{\cal W}}
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\ignore}[1]{}
+\newcommand{\bmm}{\bm {m}}
+\newcommand{\gen}[1]{\ensuremath{\langle#1\rangle} }
+\newcommand{\combi}[2]{{}_{#1} {\rm C}_{#2}}
+
+% í Çµî‘çÜ
+\newtheorem{theorem}{íËóù}
+\newtheorem{definiton}[theorem]{íËã`}
+\newtheorem{lemma}[theorem]{ï‚ëË}
+
+\def\qed{\hfill $\Box$}

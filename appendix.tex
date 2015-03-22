@@ -1,0 +1,51 @@
+\chapter{\texorpdfstring{安全性仮定に関する問題一覧}{付録}}
+\label{assumption_list}
+このテキストでは暗号の安全性仮定に使われる様々な問題を紹介しました。
+その一覧をまとめておきます。
+基本的にある性質を具体的に求める「計算○○問題」（頭にComputationalのCがつく）と、ある値がある条件を満たしているかを判定する「判定○○問題」（頭にDecisionalのDがつく）の2種類があります。
+C-やD-がついていないときは通常計算問題を意味します。
+
+\section{乗法群表記の問題}
+乗法に関する巡回群$G$とその生成元$g$をとる。
+\begin{itemize}
+\item[] DL問題（Discrete Logarithm）：$n$を整数として$g$, $g^n$が与えられたときに$n$を求めよ。
+\item[] CDH問題（Diffie-Hellman）：$a$, $b$を整数として$g$, $g^a$, $g^b$が与えられたときに$g^{ab}$を求めよ。
+\item[] DDH問題：$a$, $b$, $c$を整数として$g$, $g^a$, $g^b$および$g^{ab}$か$g^c$のどちらかが与えられたときにそのどちらが与えられたかを判定せよ。
+\end{itemize}
+
+RSA問題：
+$p$, $q$を素数として$n:=pq$とする。
+\[
+de \equiv 1 \pmod{(p-1)(q-1)}
+\]
+となる整数$d$, $e$を選ぶ。整数$m$に対して
+$n$, $e$, $c:=m^d \pmod{n}$が与えられたときに$m$を求めよ。
+
+\newpage
+
+\section{加法群表記およびペアリングの問題}
+加法に関する巡回群$G$とその生成元$P$、乗法に関する巡回群$G'$、および対称ペアリング$e:G \times G \rightarrow G'$をとる。
+\[
+g:=e(P, P) \in G'
+\]
+は$G'$の生成元である。
+\begin{table}[H]
+\begin{center}
+\caption{このテキストに登場した問題一覧}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+問題の名前 & 秘密の値 & 公開される値 & 求める値 & 登場箇所 \\\hline
+\hline
+DL & $a$ & $P$, $aP$ & $a$ & \ref{sec:ec_crypto}節 \\\hline
+DH & $a$, $b$ & $P$, $aP$, $bP$ & $abP$ & \ref{sec:ec_crypto}節 \\\hline
+BDH（Bilinear DH） & $a$, $b$, $c$ & $P$, $aP$, $bP$, $cP$ & $g^{abc}$ & \ref{ID-base}節 \\\hline
+DBDH（Decisional BDH） & $a$, $b$, $c$ & $P$, $aP$, $bP$, $cP$, $Q$ & $g^{abc}\underset{?}{=}Q$
+ &\shortstack{{}\\ \ref{abe_safe}節\\ \ref{proxy}節} \\\hline
+DLIN & \shortstack{{}\\$a$, $b$, $c$,\\ $x$, $y$} & \shortstack{{}\\$P$, $xP$, $yP$, $axP$,\\ $byP$, $cP$} & $(a+b)P\underset{?}{=}cP$ & \ref{dpvs}節 \\\hline
+$n$-DHI（DH Inversion）& $a$ & $P, aP, \dots, a^nP$ & $(1/a)P$ & \ref{sec:hint}節 \\\hline
+$n$-SDH（Strong DH） & $a$ & $P, aP, \dots, a^nP$ & \shortstack{{}\\ある$b$に対する\\ $g^{1/(a+b)}$} & \ref{SDH}節 \\\hline
+$n$-BDHI（BDH Inversion） & $a$ & $P, aP, \dots, a^nP$ & $g^{1/a}$ & \ref{SDH}節 \\\hline
+$n$-BDHE（BDH Exponent） & $a$ & \shortstack{{}\\$P, aP, \dots,a^nP$,\\ $a^{n+2}P, \dots, a^{2n}P$} & $g^{a^{n+1}}$ & \ref{BGW}節  \\\hline
+\end{tabular}
+\end{center}
+\end{table}
