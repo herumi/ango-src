@@ -2,9 +2,8 @@
 ====
 
 このテキストは2000年以降に登場したペアリングを使った暗号の紹介をします。
-最新版は[github]( https://github.com/herumi/ango/)から取得できます。
-[紹介記事](http://developer.cybozu.co.jp/tech/?p=8567)
-
+最新版は[github](https://github.com/herumi/ango/blob/master/ango.pdf)にあります。
+[紹介ブログ記事](http://developer.cybozu.co.jp/tech/?p=8567)
 
 主な目次
 ---

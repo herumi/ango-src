@@ -18,7 +18,7 @@ IMG = img/dh.pdf img/dh-ok.pdf img/dh-ng.pdf img/elgamal-weak.pdf \
     img/zero.pdf img/miller-line.pdf img/proxy0.pdf img/proxy.pdf \
     img/inner-product.pdf img/mtorsion.pdf img/ec-zero.pdf \
     img/dlin.pdf img/ec_walk.pdf img/base.pdf img/abe.pdf \
-    img/contents.pdf img/gcd.pdf img/pki-rensa.pdf
+    img/contents.pdf img/gcd.pdf
 
 .pptx.pdf:
     pptx2pdf $?
