@@ -299,11 +299,11 @@ LWE‚Ì‚¤‚¿‰‰ŽZŒø—¦‚ª‚æ‚¢‚à‚Ì‚Æ‚µ‚Äring-LWEiRLWEj‚ª‚ ‚è‚Ü‚·~\cite{LPR10}B
 ‚±‚ê‚Ís—ñ‚Ì‰‰ŽZ‚ðŠÂi‚©‚ñjã‚Ì‰‰ŽZ‚É’u‚«Š·‚¦‚½‚à‚Ì‚Å‚·B
 ŠÂ‚Æ‚Í‘«‚µŽZAˆø‚«ŽZAŠ|‚¯ŽZ‚Í‚Å‚«‚é‚¯‚ÇŠ„‚èŽZ‚ª‚Å‚«‚é‚Æ‚ÍŒÀ‚ç‚È‚¢‘ÎÛ•¨‚Å‚·B‘Ì‚É‚È‚è‘¹‚Ë‚½‚à‚Ì‚Æ‚¢‚¤Š´‚¶‚Å‚·B
 ‚½‚Æ‚¦‚Î6‚Í‘f”‚Å‚Í‚È‚¢‚Ì‚Å‚»‚Ì—]‚è‚Ì¢ŠE$\ZZ/6\ZZ:=\Set{0,1,2,3,4,5}$‚Í‘Ì‚Å‚Í‚È‚­ŠÂ‚É‚È‚è‚Ü‚·B
-wƒCƒfƒAƒ‹ŠiŽqˆÃ†“ü–åxi—L“c³„j\cite{arita}‚Í‹ï‘Ì“I‚È¬‚³‚¢’l‚É‚Â‚¢‚Ä—á‚ðo‚µ‚È‚ª‚çÚ‚µ‚­‰ðà‚µ‚Ä‚¢‚Ü‚·B
+wƒCƒfƒAƒ‹ŠiŽqˆÃ†“ü–åxi—L“c³„j\cite{arita}‚Í‹ï‘Ì—á‚ðo‚µ‚È‚ª‚çÚ‚µ‚­‰ðà‚µ‚Ä‚¢‚Ü‚·B
 
-RLWE‚Å‚Í$n$‚ð2‚Ì‹Ðæ‚Ì®”‚Æ‚µ‚Ä$R:=\ZZ[x]/(x^n+1)$‚ðl‚¦‚Ü‚·B
-$\ZZ[x]$‚Í$x$‚ð•Ï”‚Æ‚·‚é®”ŒW”‚Ì‘½€Ž®‘S‘Ì‚ÅA$\ZZ[x]/(x^n+1)$‚Í‘½€Ž®‚ð$x^n+1$‚ÅŠ„‚Á‚½—]‚è‚ðl‚¦‚é‚Æ‚¢‚¤ˆÓ–¡‚Å‚·i\ref{extend_field}ßŽQÆjB
-®”ŒW”‚Ì‘ã‚í‚è‚É$\FF_p$ŒW”‚Ìê‡‚ð$R_p:=\FF_p[x]/(x^n+1)$‚Æ‘‚­‚±‚Æ‚É‚µ‚Ü‚·B
+RLWE‚Å‚Í$n$‚ð2‚Ì‹Ðæ‚Ì®”‚Æ‚µ$R:=\ZZ[x]/(x^n+1)$‚ðl‚¦‚Ü‚·B
+$\ZZ[x]$‚Í$x$‚ð•Ï”‚Æ‚·‚é®”ŒW”‚Ì‘½€Ž®‘S‘Ì‚Å$\ZZ[x]/(x^n+1)$‚Í‘½€Ž®‚ð$x^n+1$‚ÅŠ„‚Á‚½—]‚è‚ðl‚¦‚é‚Æ‚¢‚¤ˆÓ–¡‚Å‚·i\ref{extend_field}ßŽQÆjB
+®”ŒW”‚Ì‘ã‚í‚è‚É$\FF_p$ŒW”‚Ìê‡‚Í$R_p:=\FF_p[x]/(x^n+1)$‚Æ‘‚«‚Ü‚·B
 $R$‚ÌŒ³$y$‚Í$x^n+1$‚ÅŠ„‚Á‚½‘½€Ž®‚Å‚·‚©‚ç‚X$n-1$ŽŸ‚Ì‘½€Ž®‚Æ‚È‚èA$n$ŒÂ‚Ì$a_i \in \ZZ$‚ðŽg‚Á‚Ä
 \[
 y=\sum_{i=0}^{n-1} a_i x^i
@@ -313,6 +313,8 @@ $y$‚Ì‘å‚«‚³‚ð$|y|:=\max{|a_i|}$‚Æ‚µ‚Ü‚·B
 $R$‚ÌŒ³‚ð‚ ‚é•ª•z‚É‚µ‚½‚ª‚Á‚Ä‘I‚Ô‚Æ‚¢‚¤‚Ì‚ðA$n$ŒÂ‚Ì$\ZZ$‚ÌŒ³‚ð‚»‚Ì•ª•z‚©‚ç‘I‚Ô‚±‚Æ‚Æ’è‹`‚µ‚Ü‚·B
 “Á‚É•½‹Ï0A•W€•Î·$\sigma$‚ÌGauss•ª•z‚©‚ç$y$‚ð‘I‚Ô‚±‚Æ‚ð$y \leftarrow \chi$‚Æ‘‚­‚±‚Æ‚É‚µ‚Ü‚·B
 $R_p$‚ÌŒ³‚É‚Â‚¢‚Ä‚à“¯—l‚Å‚·B
+
+‚±‚Ìß‚Å‚Í$x \in \FF_p$‚ª$p/2<x$‚Ì‚Æ‚«$x-p$‚Æ‚Ý‚È‚µ‚Ü‚·B‚Â‚Ü‚è$\FF_p$‚ÌŒ³‚ð$-p/2$ˆÈã$p/2$–¢–ž‚Ì®”‚Æ‚µ‚Äˆµ‚¢‚Ü‚·B
 
 RLWE‚ÍŽŸ‚ÌŒ`‚É‚È‚è‚Ü‚·B
 $R_p$‚©‚çƒ‰ƒ“ƒ_ƒ€‚É$s$‚ð‚Æ‚èA“K“–‚È‰ñ”‚¾‚¯$a_i \in F_p$‚ðƒ‰ƒ“ƒ_ƒ€‚ÉA$e_i \in R_p$‚ð‚ ‚éŠm—¦‚É‚µ‚½‚ª‚Á‚Ä‘I‚ÔŒë·‚Æ‚µ‚½‚Æ‚«A
@@ -360,13 +362,20 @@ $k'':=\max(k,k')$‚Æ‚µA’Z‚¢•û‚ÌƒxƒNƒgƒ‹‚É0‚ð’Ç‰Á‚µ‚Ä“¯‚¶’·‚³$k''$‚ÌƒxƒNƒgƒ‹‚É‚·‚
 ‚Æ‚·‚éB
 ‚±‚ê‚Í$y$‚ð•Ï”‚Æ‚µ‚Ä$R_p$ŒW”‚Ì‘½€Ž®‚Æ‚µ‚Ä‚ÌæŽZF
 \[
-\left(\sum_{i=0}^k c_i \right)\left(\sum_{i=0}^{k'} c'_i v^i\right)=\sum_{i=0}^{k+k'} \hat{c}_i v^i
+\left(\sum_{i=0}^k c_i y^i \right)\left(\sum_{i=0}^{k'} c'_i y^i\right)=\sum_{i=0}^{k+k'} \hat{c}_i y^i
 \]
 ‚ðŒvŽZ‚µ‚½‚±‚Æ‚É‚È‚éiŒW”‚Ìô‚Ýž‚Ý‚ÆŒÄ‚Î‚ê‚Ü‚·jB‚»‚µ‚Ä
 \[
 \Mul(c,c'):=(\hat{c}_0, \dots, \hat{c}_{k+k'})
 \]
-‚Æ‚·‚éB
+‚Æ‚·‚éB‚½‚Æ‚¦‚Î$c:=(c_0,c_1)$, $c':=(c'_0,c'_1)$‚È‚ç
+\[
+(c_0+c_1y)(c'_0+c'_1y)=(c_0c'_0)+(c_0c'_1+c_1c'_0)y+(c_1c'_1)y^2
+\]
+‚È‚Ì‚Å
+\[
+\Mul(c,c')=(\hat{c}_0,\hat{c}_1,\hat{c}_2)=(c_0c'_0, c_0c'_1+c_1c'_0, c_1c'_1).
+\]
 \end{itemize}
 ‚Ü‚¸³‚µ‚­•œ†‚Å‚«‚é‚±‚Æ‚ðŠm”F‚µ‚Ü‚·B
 \[
@@ -384,7 +393,7 @@ $k'':=\max(k,k')$‚Æ‚µA’Z‚¢•û‚ÌƒxƒNƒgƒ‹‚É0‚ð’Ç‰Á‚µ‚Ä“¯‚¶’·‚³$k''$‚ÌƒxƒNƒgƒ‹‚É‚·‚
 \begin{figure}[H]
   \centering
   \includegraphics{img/rlwe.pdf}
-  \caption{$p/2$ˆÈ‰º‚È‚ç$t$‚ÅŠ„‚Á‚Ä$m$‚ðŽæ‚èo‚¹‚éB‰z‚¦‚é‚ÆžB–†‚É‚È‚éB}
+  \caption{$p/2$ˆÈ‰º‚È‚ç$t$‚ÅŠ„‚Á‚Ä$m$‚ðŽæ‚èo‚¹‚éB‰z‚¦‚é‚ÆŽæ‚èo‚µ•û‚ªžB–†‚É‚È‚éB}
   \label{fig:rlwe}
 \end{figure}
 ‚±‚Ì‚æ‚¤‚É³‚µ‚¢’l‚ÉŒë·‚ð‰Á‚¦‚ÄˆÃ†‰»‚µA•œ†‚·‚é‚Æ‚«‚É‚»‚ÌŒë·‚ðŽæ‚èœ‚­‚Ì‚ªŠiŽq‚ðŽg‚Á‚½ˆÃ†‚Ì“Á’¥‚Å‚·B
@@ -392,13 +401,13 @@ $k'':=\max(k,k')$‚Æ‚µA’Z‚¢•û‚ÌƒxƒNƒgƒ‹‚É0‚ð’Ç‰Á‚µ‚Ä“¯‚¶’·‚³$k''$‚ÌƒxƒNƒgƒ‹‚É‚·‚
 \[
 \varphi(c):=\sum_{i=0}^k c_i s^k
 \]
-‚Æ‚µ‚½‚Æ‚«A$\varphi(c)= m + te$i$e$‚Í“K“–‚ÈŒë·‚Å$|te|<q/2$j‚Æ‚¢‚¤Œ`‚É‚È‚Á‚½‚Æ‚µ‚Ü‚·B
+‚Æ‚µ‚½‚Æ‚«A$\varphi(c)= m + te$i$e$‚Í“K“–‚ÈŒë·‚Å$|m+te|<p/2$j‚Æ‚¢‚¤Œ`‚É‚È‚Á‚½‚Æ‚µ‚Ü‚·B
 ‚·‚é‚ÆAˆÃ†•¶$c$‚Æ$c'$‚É‘Î‚µ‚Ä
 \begin{align*}
 &\varphi(c)\varphi(c')=(m+te)(m'+te')=mm'+t(tee'+em'+e'm)=mm'+te'',\\
 &\text{‚½‚¾‚µ } e'':=tee'+em'+e'm.
 \end{align*}
-$e''$‚Ì’†‚É$t$‚ª“ü‚Á‚Ä‚¢‚é‚Ì‚Å‘«‚µŽZ‚Ì‚Æ‚«‚æ‚è‚à’l‚ª‘å‚«‚¢‚Å‚·‚ª$|te''|<p/2$‚Æ‚È‚é‚æ‚¤‚É$p$‚ð\•ª‘å‚«‚­Žæ‚Á‚Ä‚¨‚¯‚Î$t$‚ÅŠ„‚Á‚Ä$mm'$‚ðŽæ‚èo‚¹‚Ü‚·B
+$e''$‚Ì’†‚É$t$‚ª“ü‚Á‚Ä‚¢‚é‚Ì‚Å‰ÁŽZ‚Ì‚Æ‚«‚æ‚è‘å‚«‚­‚È‚è‚Ü‚·‚ª$|mm'+te''|<p/2$‚Æ‚È‚é‚æ‚¤‚É‚µ‚Ä‚¨‚¯‚Î$t$‚ÅŠ„‚Á‚Ä$mm'$‚ðŽæ‚èo‚¹‚Ü‚·B
 ‚Â‚Ü‚èˆÃ†‰»‚µ‚½‚Ü‚ÜæŽZ‚à‚Å‚«‚Ü‚·B
 
 ‚±‚ÌˆÃ†•ûŽ®‚Å‚ÍŒvŽZ“r’†‚ÉŒ»‚ê‚éŽ®‚ÌŒW”‚ª$p/2$‚ð‰z‚¦‚Ä‚µ‚Ü‚¤‚Æ•œ†‚Å‚«‚È‚­‚È‚é‚Ì‚ÅŠeŽíƒpƒ‰ƒ[ƒ^‚ðTd‚ÉŒˆ‚ß‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñB
