@@ -128,8 +128,8 @@ DVPSについては次節で紹介しましょう。
 DPVSの紹介の前に線形代数の基本をおさらいします。
 $x$, $y$を有限体$\FF_p$の$n$個の点からなる横ベクトルとします。
 \begin{align*}
-&x:=(x_1, \dots, x_n) \in \FF_p^n,\\
-&y:=(y_1, \dots, y_n) \in \FF_p^n.
+&x:=(x_1, \dots, x_n) \in {\FF_p}^n,\\
+&y:=(y_1, \dots, y_n) \in {\FF_p}^n.
 \end{align*}
 $B:=(b_{ij})$を行列式が0でない$n$次正方行列とし、
 $b_i:=(b_{i1}, \dots, b_{in})$とすると$\bolB:=\Set{b_i}$は$V$の基底となり
@@ -253,7 +253,7 @@ DPVSを用いて構成したattribute-hidingな内積暗号を紹介します~\cite{OT2012}。
 $g_T:=e(P,P)^r$とします。
 行列$\bolB$と$g_T$がシステムの公開鍵で$\bolB^*$がシステムの秘密鍵です。
 
-パラメータ$v \in \FF_p^n$に対する鍵生成を次のようにします。
+パラメータ$v \in {\FF_p}^n$に対する鍵生成を次のようにします。
 $\sigma$, $\eta$を$\FF_q$, $(\FF_q)^n$からランダムに選び、秘密鍵$k^*$を
 \[
 k^*:=(\underbrace{1}_{1}, \underbrace{\sigma v}_{n}, \underbrace{0}_{2n}, \underbrace{\eta}_{n}, \underbrace{0}_{1})_{\bolB^*} \text{ に対応する$V$の元}
@@ -261,7 +261,7 @@ k^*:=(\underbrace{1}_{1}, \underbrace{\sigma v}_{n}, \underbrace{0}_{2n}, \under
 としてユーザに渡します（基底$\bolB^*$を用いて計算します）。
 ここで1, $n$, $2n$, $n$, 1はそれぞれの次元を表します。
 
-平文$m$とパラメータ$x \in \FF_p^n$に対する暗号化は、
+平文$m$とパラメータ$x \in {\FF_p}^n$に対する暗号化は、
 $\omega$, $\phi$, $\zeta$をランダムに選び、
 \begin{align*}
 &c_1:=(\underbrace{\zeta}_{1},\underbrace{\omega x}_{n},\underbrace{0}_{2n}, \underbrace{0}_{n},\underbrace{\phi}_{1})_\bolB \text{ に対応する$V$の元},\\
