@@ -11,3 +11,4 @@ _*.tex
 *.bbl
 img/*.pdf
 img/*.xbb
+ango.synctex.gz
