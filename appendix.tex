@@ -39,9 +39,9 @@ g:=e(P, P) \in G'
 DL & $a$ & $P$, $aP$ & $a$ & \ref{sec:ec_crypto}節 \\\hline
 DH & $a$, $b$ & $P$, $aP$, $bP$ & $abP$ & \ref{sec:ec_crypto}節 \\\hline
 BDH（Bilinear DH） & $a$, $b$, $c$ & $P$, $aP$, $bP$, $cP$ & $g^{abc}$ & \ref{ID-base}節 \\\hline
-DBDH（Decisional BDH） & $a$, $b$, $c$ & $P$, $aP$, $bP$, $cP$, $Q$ & $g^{abc}\underset{?}{=}Q$
+DBDH（Decisional BDH） & $a$, $b$, $c$ & $P$, $aP$, $bP$, $cP$, $Q$ & $g^{abc} \eqq Q$
  &\shortstack{{}\\ \ref{abe_safe}節\\ \ref{proxy}節} \\\hline
-DLIN & \shortstack{{}\\$a$, $b$, $c$,\\ $x$, $y$} & \shortstack{{}\\$P$, $xP$, $yP$, $axP$,\\ $byP$, $cP$} & $(a+b)P\underset{?}{=}cP$ & \ref{dpvs}節 \\\hline
+DLIN & \shortstack{{}\\$a$, $b$, $c$,\\ $x$, $y$} & \shortstack{{}\\$P$, $xP$, $yP$, $axP$,\\ $byP$, $cP$} & $(a+b)P \eqq cP$ & \ref{dpvs}節 \\\hline
 $n$-DHI（DH Inversion）& $a$ & $P, aP, \dots, a^nP$ & $(1/a)P$ & \ref{sec:hint}節 \\\hline
 $n$-SDH（Strong DH） & $a$ & $P, aP, \dots, a^nP$ & \shortstack{{}\\ある$b$に対する\\ $g^{1/(a+b)}$} & \ref{SDH}節 \\\hline
 $n$-BDHI（BDH Inversion） & $a$ & $P, aP, \dots, a^nP$ & $g^{1/a}$ & \ref{SDH}節 \\\hline
