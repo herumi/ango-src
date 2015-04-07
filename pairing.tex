@@ -54,16 +54,9 @@ e: E \times E \longrightarrow F_q.
 ここでは直感的に理解しやすい幾何学的な描写をします。
 
 楕円曲線上の2点$P$, $Q$が与えられると原点$O$, $P$, $Q$, $R:=P+Q$で作られた平行四辺形$OPRQ$が決まります。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/pairing-def.pdf}
-  \caption{原点$O$と点$P$, $Q$から定まる平行四辺形$OPRQ$}
-  \label{pairing-def}
-\end{figure}
 この平行四辺形$OPRQ$の面積は2点$P$, $Q$で決まるので$S(P,Q)$と書くことにします。
 なお、面積は符号付きで考えることにして$Q$が$P$の反時計周りにあるときを正、逆向きにあるときを負とします。
 面積$S(P,Q)$を、有限体のある固定値$g$の指数に乗せたものがペアリングの値です。
-$g$については後ほど触れます。
 \[
 \begin{array}{cccc}
 e:& E \times E       & \longrightarrow & F_q                     \\
@@ -71,6 +64,13 @@ e:& E \times E       & \longrightarrow & F_q                     \\
 &(P,Q)                 & \longmapsto     & g^{S(P,Q)}.
 \end{array}
 \]
+$g$については後ほど触れます。
+\begin{figure}[H]
+  \centering
+  \includegraphics{img/pairing-def.pdf}
+  \caption{原点$O$と点$P$, $Q$から定まる平行四辺形$OPRQ$}
+  \label{pairing-def}
+\end{figure}
 
 ペアリングの性質を調べましょう。
 まず$P=Q$のときは平行四辺形がつぶれて面積が0になるのでペアリングの値は1になります。
@@ -125,9 +125,10 @@ $P_X$は誰でも計算できる。
 	\item[] Bは秘密鍵$K_B$と、AのIDから求まる$P_A$を使って$s_B:=e(P_A, K_B)$を計算する。
 	\end{itemize}
 ペアリングのとり方の順序に注意。IDに順序関係を入れて小さい方の添え字を前にする（この場合は$A < B$）などの取り決めが必要。
-\[
-s_A=e(K_A, P_B)=e(s P_A, P_B)=e(P_A, P_B)^s=e(P_A, s P_B)=e(P_A, K_B)=s_B
-\]
+\begin{align*}
+s_A &=e(K_A, P_B)=e(s P_A, P_B)=e(P_A, P_B)^s=e(P_A, s P_B)\\
+&=e(P_A, K_B)=s_B
+\end{align*}
 が成り立つので二人の間で秘密の値を共有できる。
 \end{itemize}
 このID鍵共有の安全性については後ほど触れるとして、ECDH鍵共有との違いを比べます。
@@ -402,7 +403,8 @@ $E$から有限体へのハッシュ関数$h_2:E \rightarrow \FF_q$を決めて公開する。
 \item[] \textbf{ユーザAに対して平文$m$を暗号化}：
 乱数$r$をとり$\Enc(m):=(rP, m \oplus h_2(e(P_A, sP)^r))$を暗号文とする。
 \item[] \textbf{ユーザAの復号}：
-暗号文$C=(U, v)$を受け取り$\Dec(U, v):=v \oplus h_2(e(K_A, U))$とする。
+暗号文$C=(U, v)$を受け取り\\
+$\Dec(U, v):=v \oplus h_2(e(K_A, U))$とする。
 \end{itemize}
 ペアリングの性質から
 \[
@@ -411,7 +413,8 @@ e(P_A, sP)^r=e(P_A,P)^{sr}=e(sP_A,rP)=e(K_A,rP)
 が成り立ちます。
 すると
 \begin{align*}
-\Dec(\Enc(m))&=\Dec((U, v))=v \oplus h_2(e(K_A,U))=(m \oplus h_2(e(P_A,sP)^r)) \oplus h_2(e(K_A,rP))\\
+\Dec(\Enc(m))&=\Dec((U, v))=v \oplus h_2(e(K_A,U))\\
+&=(m \oplus h_2(e(P_A,sP)^r)) \oplus h_2(e(K_A,rP))\\
 &=(m \oplus h_2(e(K_A,rP))) \oplus h_2(e(K_A,rP)) =m
 \end{align*}
 となり正しく復号できます。

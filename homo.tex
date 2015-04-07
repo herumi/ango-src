@@ -37,9 +37,10 @@ ElGamal暗号は$g$を公開パラメータ、秘密鍵を$x$、公開鍵$y:=g^x$を固定し、平文$m$に
 \Enc'(m) := \Enc(h^m)=(g^r,h^my^r).
 \]
 すると2個の平文$m_1$, $m_2$に対しては
-\[
-\Enc'(m_1)\Enc'(m_2)=\Enc(h^{m_1})\Enc(h^{m_2})=\Enc(h^{m_1}h^{m_2})=\Enc(h^{m_1+m_2})=\Enc'(m_1+m_2)
-\]
+\begin{align*}
+\Enc'(m_1)\Enc'(m_2)&=\Enc(h^{m_1})\Enc(h^{m_2})=\Enc(h^{m_1}h^{m_2})=\Enc(h^{m_1+m_2})\\
+&=\Enc'(m_1+m_2)
+\end{align*}
 が成り立ちます。
 ここでこの式の右辺を形式的に$\Enc'(m_1) + \Enc'(m_2)$と書くと
 \[
@@ -173,7 +174,8 @@ R:=(c^2-tc+ta+tb)|\bvec{x} \cap \bvec{y}|-ta|\bvec{x}|-tb|\bvec{y}| \ge 0
 \label{eq:tversky}
 \end{eqnarray}
 となります。
-目標は暗号化された$\bvec{x}$が与えられたときに任意の$\bvec{y}$と式（\ref{eq:tversky}）の左辺を計算することです。
+目標は暗号化された$\bvec{x}$が与えられたときに既知の$\bvec{y}$と式（\ref{eq:tversky}）の左辺を計算することです。
+$|\bvec{x} \cap \bvec{y}|$と$|\bvec{x}|$を求められれば十分です。
 平文$m$のlifted-ElGamal暗号を$\Enc(m)$とします。
 $\bvec{x}:=(x_1, \dots, x_n)$の各ビットをそれぞれ暗号化したものを
 $\Enc(\bvec{x}):=(\Enc(x_1), \dots, \Enc(x_n))$と書き、クライアントは$\Enc(\bvec{x})$をサーバに送ります。
@@ -404,7 +406,7 @@ $\bmod{p}$で考えているので値が$p$を越えると$t$で割ったとき正しく値を取り出せなく
 このように正しい値に誤差を加えて暗号化し、復号するときにその誤差を取り除くのが格子を使った暗号の特徴です。
 暗号文、$c:=(c_0, \dots, c_k)$について
 \[
-\varphi(c):=\sum_{i=0}^k c_i s^k
+\varphi(c):=\sum_{i=0}^k c_i s^i
 \]
 としたとき、$\varphi(c)= m + te$（$e$は適当な誤差で$|m+te|<p/2$）という形になったとします。
 すると、暗号文$c$と$c'$に対して

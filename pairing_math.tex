@@ -325,21 +325,23 @@ $S$を動かすとき$f_P(Q+S)$は$f_P$を$Q$だけ平行移動したものです。
 \]
 同様に$\Div(f_Q(-S))=m(-Q)-m(O)$, $\Div(f_Q(P-S))=m(P-Q)-m(P)$となります。
 したがって
-\[
-\Div(F)=(m(P-Q)-m(-Q))-(m(P)-m(O))+(m(-Q)-m(O))-(m(P-Q)-m(P))=0
-\]
+\begin{align*}
+\Div(F)&=(m(P-Q)-m(-Q))-(m(P)-m(O))+(m(-Q)-m(O))\\
+&-(m(P-Q)-m(P))=0
+\end{align*}
 となります。
 $F$は零点も極も持たないので定数であることが分かりました。
 
 次に双線形性を示しましょう。
 点$P_1$, $P_2 \in E[m]$をとり$e(P_1+P_2,Q)=e(P_1,Q)e(P_2,Q)$を示せば十分です。
 この示したい式を定義にしたがって展開すると
-\[
+\begin{align*}
 \frac{f_{P_1+P_2}(Q+S)}{f_{P_1+P_2}(S)} \frac{f_Q(-S)}{f_Q(P_1+P_2-S)}
-=
-\frac{f_{P_1}(Q+S)}{f_{P_1}(S)} \frac{f_Q(-S)}{f_Q(P_1-S)}
+&=
+\frac{f_{P_1}(Q+S)}{f_{P_1}(S)} \frac{f_Q(-S)}{f_Q(P_1-S)}\\
+& \cdot
 \frac{f_{P_2}(Q+S)}{f_{P_2}(S)} \frac{f_Q(-S)}{f_Q(P_2-S)}.
-\]
+\end{align*}
 \[
 f(X):=\frac{f_{P_1+P_2}(X)}{f_{P_1}(X)f_{P_2}(X)}
 \]
@@ -369,7 +371,7 @@ f(X):=\frac{f_{P_1+P_2}(X)}{f_{P_1}(X)f_{P_2}(X)}
 \begin{align*}
 \frac{g^m(Q+S)}{g^m(S)}
  &=g(m(Q+S)-m(S))\\
- &\text{ここで$h(X):=f_Q(X-S)$とすると$\Div(h)=m(Q+S)-m(S)$なので}\\
+ &\text{ここで$h(X):=f_Q(X-S)$とすると$\Div(h)=m(Q+S)-m(S)$より}\\
  &=g(\Div(h)) \quad \text{ここで定理\ref{weil_reciprocity}を使うと}\\
  &=h(\Div(g))\\
  &=h((P_1+P_2)-(P_1)-(P_2)+(O))=\frac{h(P_1+P_2)h(O)}{h(P_1)h(P_2)}.

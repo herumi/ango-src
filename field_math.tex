@@ -77,8 +77,9 @@ $r_i \ge 0$なのでこれは有限回で止まります。
 
 先ほどの例を見直すと、
 \begin{align*}
-\gcd(72,27)&=\gcd(72\bmod{27},27)=\gcd(18,27)=\gcd(27,18)=\gcd(27\bmod{18},18)\\
-&=\gcd(9,18)=\gcd(18,9)=\gcd(18\bmod{9},9)=\gcd(0,9)=9
+\gcd(72,27)&=\gcd(72\bmod{27},27)=\gcd(18,27)=\gcd(27,18)\\
+&=\gcd(27\bmod{18},18)=\gcd(9,18)=\gcd(18,9)=\gcd(18\bmod{9},9)\\
+&=\gcd(0,9)=9
 \end{align*}
 を計算していたのでした。
 \begin{figure}[H]
@@ -184,7 +185,8 @@ $n=k$のとき成り立つとすると$n=k+1$のとき、
 \end{align*}
 ここで
 \begin{align*}
-\combi{n}{k-1}+\combi{n}{k} &= \frac{n!}{(k-1)!(n-k+1)!} + \frac{n!}{k! (n-k)!}=\frac{n! k}{k! (n+1-k)!}+\frac{n!(n+1-k)}{k! (n+1-k)!}\\
+\combi{n}{k-1}+\combi{n}{k} &= \frac{n!}{(k-1)!(n-k+1)!} + \frac{n!}{k! (n-k)!}\\
+&=\frac{n! k}{k! (n+1-k)!}+\frac{n!(n+1-k)}{k! (n+1-k)!}\\
 &=\frac{n! (k+n+1-k)}{k! (n+1-k)!}=\frac{(n+1)!}{k!(n+1-k)!}=\combi{n+1}{k}
 \end{align*}
 を使うと
@@ -227,9 +229,10 @@ x^p \equiv x \pmod{p}.
 \]
 \end{lemma}
 なぜなら補題\ref{frobenius}を使うと
-\[
-x^p=(1+(x-1))^p \equiv 1^p+(x-1)^p=1+(x-1)^p\equiv 1+1+(x-2)^p \equiv \dots \equiv \underbrace{1 + \cdots + 1}_{x個}=x \pmod{p}.
-\]
+\begin{align*}
+x^p&=(1+(x-1))^p \equiv 1^p+(x-1)^p=1+(x-1)^p\equiv 1+1+(x-2)^p\\
+& \equiv \dots \equiv \underbrace{1 + \cdots + 1}_{x個}=x \pmod{p}.
+\end{align*}
 \qed
 \begin{theorem}[Fermat（フェルマー）の小定理]
 有限体${\FF_p}^*$の元$x$に対して

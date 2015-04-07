@@ -79,13 +79,14 @@ e(K_u,uQ + aQ)=e\left(\frac{1}{u+a}P, (u+a)Q\right)=e(P, Q)=s
 それはともかく、ここでユーザの部分集合$S$が結託攻撃をして
 $\Set{K_{u_i}}_{u_i \in S}$に入っていないユーザ$u$に対する$K_u$を作るのは難しいだろうと感じました。
 つまり
-\[
-「\left(\frac{1}{u_1+a}P, \dots, \frac{1}{u_n+a}P\right)が与えられたときにu \notin \Set{u_1, \dots, u_n}に対する\frac{1}{u+a}Pを求めよ。」
-\]
+\begin{align*}
+&「\left(\frac{1}{u_1+a}P, \dots, \frac{1}{u_n+a}P\right)が与えられたときに\\
+&u \notin \Set{u_1, \dots, u_n}に対する\frac{1}{u+a}Pを求めよ。」
+\end{align*}
 この問題（仮に$n$-CAAと呼びましょう）は難しい。
 この直感は今でも有効です（安全でなかったのはこれとは別の部分です）。
 
-ただ発表するときに$n$-CAAが難しいから安全というのでは説得力が足りません。
+ただこの方式を提案するときに$n$-CAAが難しいから安全というのでは説得力が足りません。
 2000年頃はまだペアリングを使った暗号自体が認知されていませんでした。
 初めてこの方式を発表したのは、2001年3月の先端技術フォーラム（FACT）という研究集会で、
 %\footnote{http://www2.tamacc.chuo-u.ac.jp/souki/hyouka/kiso-date/kikou.pdf}
