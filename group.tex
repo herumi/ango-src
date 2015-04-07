@@ -323,25 +323,22 @@ x = x_2 + ah
 
 $a$と$b$が互いに素なので\ref{calc_field_inv}節で紹介する拡張Euclidの互除法を使うことで
 \[
-sa + tb = 1, \quad \text{つまり} sa=1-tb
+sa + tb = 1.
 \]
-となる整数$s$と$t$が見つかります。
+つまり$sa=1-tb$となる整数$s$と$t$が見つかります。
+また
 \[
-x = x_1 + bk = x_2 + ah, \quad \text{つまり} x_1 - x_2 = ah - bk.
+x = x_1 + bk = x_2 + ah, \, \text{ より } x_1 - x_2 = ah - bk.
 \]
 よって
+\[
+s(x_1-x_2)=s(ah-bk) = sah - sbk = (1-tb)h - sbk = h - (th+sk)b.
+\]
+つまり$h = s(x_1-x_2)+(th+sk)b$。よって
 \begin{align*}
-&s(x_1-x_2)=s(ah-bk) = sah - sbk = (1-tb)h - sbk = h - (th+sk)b \quad \text{つまり},\\
-&h = s(x_1-x_2)+(th+sk)b.
+x &= x_2 + ah = x_2 + a(s(x_1-x_2) + (th+sk)b)\\
+&=x_2 + as(x_1-x_2) + (th+sk)ab \equiv x_2 + as(x_1-x_2) \pmod{ab}
 \end{align*}
-よって
-\[
-x = x_2 + ah = x_2 + a(s(x_1-x_2) + (th+sk)b)=x_2 + as(x_1-x_2) + (th+sk)ab.
-\]
-よって
-\[
-x \equiv x_2 + as(x_1-x_2) \pmod{ab}
-\]
 と$x$を求めることができます。
 位数$ab$のDLPは位数$a$のDLPと位数$b$のDLPを解くと求められることが分かりました。
 

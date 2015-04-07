@@ -196,9 +196,9 @@ D:= (\alpha-\beta)^2(\beta-\gamma)^2(\gamma-\alpha)^2 \ne 0.
 同様に$(\beta-\gamma)(\gamma-\alpha)=-(3\gamma^2+a)$, $(\gamma-\alpha)(\alpha-\beta)=-(3\alpha^2+a)$.
 よって
 \begin{align*}
-D &= (\alpha-\beta)(\beta-\gamma) \cdot (\beta-\gamma)(\gamma-\alpha) \cdot (\gamma - \alpha)(\alpha-\beta)
- =  -(3\beta^2+a)(3\gamma^2+a)(3\alpha^2+a)\\
- &= -\left( a^3+3(\alpha^2+\beta^2+\gamma^2)a^2+9((\alpha \beta)^2 + (\beta \gamma)^2 + (\gamma \alpha)^2)a + 27(\alpha \beta \gamma)^2 \right).
+D &= (\alpha-\beta)(\beta-\gamma) \cdot (\beta-\gamma)(\gamma-\alpha) \cdot (\gamma - \alpha)(\alpha-\beta)\\
+&=  -(3\beta^2+a)(3\gamma^2+a)(3\alpha^2+a)\\
+&= -\left( a^3+3(\alpha^2+\beta^2+\gamma^2)a^2+9((\alpha \beta)^2 + (\beta \gamma)^2 + (\gamma \alpha)^2)a + 27(\alpha \beta \gamma)^2 \right).
 \end{align*}
 ここで
 \begin{align*}
@@ -553,9 +553,10 @@ x_3=\frac{w}{v^2 Z_1 Z_2}.
 y_3:=-\lambda(x_3-x_1)-y_1=-(u/v)\left(\frac{w}{v^2 Z_1 Z_2} - x_1\right)-y_1.
 \]
 両辺に$v^3 Z_1 Z_2$を掛けると
-\[
-y_3 (v^3 Z_1 Z_2) = -u(w-v^2 Z_1 Z_2 (X_1/Z_1)) - v^3 Z_1 Z_2 (Y_1/Z_1)=u(v^2X_1 Z_2-w)-v^3Y_1 Z_2.
-\]
+\begin{align*}
+y_3 (v^3 Z_1 Z_2) &= -u(w-v^2 Z_1 Z_2 (X_1/Z_1)) - v^3 Z_1 Z_2 (Y_1/Z_1)\\
+&=u(v^2X_1 Z_2-w)-v^3Y_1 Z_2.
+\end{align*}
 $(x_3,y_3)=(X_3/Z_3,Y_3/Z_3)$が成り立つように、かつ除算が入らないように$X_3$, $Y_3$, $Z_3$を決めると、
 \begin{align*}
  & u:=Y_2Z_1-Y_1Z_2, \quad v:=X_2Z_1-X_1Z_2,\\
@@ -578,9 +579,10 @@ x_3:=\lambda^2-2x_1=\frac{u^2}{4Y^2Z^2}-\frac{2X}{Z}=\frac{u^2-8XY^2Z}{4Y^2Z^2}=
 \]
 $w:=u^2-8XYv$とおくと$x_3=w/(4v^2)$。
 $y_3=-(u/2v)(w/(4v^2)-X/Z)-Y/Z$より
-\[
-8v^3y_3 = -u(w - 4v^2X/Z)-8v^3Y/Z = u(4XY^2Z-w) - 8Y^4Z^2=u(4XYv-w)-8Y^2v^2.
-\]
+\begin{align*}
+8v^3y_3 &= -u(w - 4v^2X/Z)-8v^3Y/Z = u(4XY^2Z-w) - 8Y^4Z^2\\
+&=u(4XYv-w)-8Y^2v^2.
+\end{align*}
 よって
 \begin{align*}
  & u:=3X^2+aZ^2, \quad v:=YZ, \quad w:= u^2-8XYv,\\
