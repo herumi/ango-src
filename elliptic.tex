@@ -306,9 +306,10 @@ GoogleのGmailは2011年にPFSに対応しました。
 \end{figure}
 FirefoxやChromeなどのブラウザで\texttt{https://www.google.co.jp/}に接続し、鍵アイコンをクリックすると接続に使われた暗号アルゴリズムを確認できます。
 図\ref{google}を見ると\texttt{ECDHE\_ECDSA}という鍵交換メカニズムが使われていることが分かります。
-\texttt{ECDHE}は楕円DH鍵共有、
+\texttt{ECDHE}はECDH鍵共有、
 \texttt{ECDSA}は前節で紹介した楕円曲線版DSAのことです。
-\texttt{ECDHE}の最後の\texttt{E}はEphemeral（短命の）という意味を表しています。
+\texttt{ECDHE}の最後の\texttt{E}はEphemeral（一時的な、短命の）という単語を指します。
+平文の暗号化に使う鍵を毎回使い捨てていることを表しています。
 \section{この章のまとめ}
 楕円曲線暗号とは楕円曲線を使った暗号全般を指します。
 楕円曲線とは上下左右がつながった長方形世界のことです。
