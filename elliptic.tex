@@ -162,7 +162,7 @@ $nP$と$P$から$n$を求めるのだから除算問題じゃないのか、なぜ対数と呼んでいるのかと
 それについては\ref{group}章で説明します。
 
 \section{楕円DH鍵共有と楕円ElGamal暗号}
-楕円曲線暗号の中で基本的な楕円DH鍵共有を紹介しましょう。
+楕円曲線暗号の中で基本的な楕円DH（ECDH：Elliptic Curve DH）鍵共有を紹介しましょう。
 \ref{seq:dh-sharing}節で紹介したDiffie-Hellman鍵共有の楕円曲線版です。
 \begin{itemize}
 \item[1.] $P$を固定する（これは公開情報です）。
@@ -306,7 +306,7 @@ GoogleのGmailは2011年にPFSに対応しました。
 \end{figure}
 FirefoxやChromeなどのブラウザで\texttt{https://www.google.co.jp/}に接続し、鍵アイコンをクリックすると接続に使われた暗号アルゴリズムを確認できます。
 図\ref{google}を見ると\texttt{ECDHE\_ECDSA}という鍵交換メカニズムが使われていることが分かります。
-\texttt{ECDHE}は楕円曲線版DH鍵共有、
+\texttt{ECDHE}は楕円DH鍵共有、
 \texttt{ECDSA}は前節で紹介した楕円曲線版DSAのことです。
 \texttt{ECDHE}の最後の\texttt{E}はEphemeral（短命の）という意味を表しています。
 \section{この章のまとめ}
