@@ -82,12 +82,7 @@ $r_i \ge 0$なのでこれは有限回で止まります。
 &=\gcd(0,9)=9
 \end{align*}
 を計算していたのでした。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/gcd.pdf}
-  \caption{72と27の最小公倍数の求め方}
-  \label{fig:gcd}
-\end{figure}
+\image{gcd.pdf}{72と27の最小公倍数の求め方}
 横72、縦27の長方形を大きな正方形から敷きつめていく感じです。
 
 さて、たとえば$s=5$だったとすると、
@@ -195,7 +190,7 @@ $n=k$のとき成り立つとすると$n=k+1$のとき、
 \end{align*}
 が成り立ちます。よって任意の$n$について2項定理が成り立ちます。\qed
 
-2項係数を図\ref{combi}のように3角形に並べると、ある列の隣り合う2個の数字の和が一つ下の列の値になっていることが分かります。
+2項係数を図\ref{fig:combi.pdf}のように3角形に並べると、ある列の隣り合う2個の数字の和が一つ下の列の値になっていることが分かります。
 これは上で示した$\combi{n}{k-1}+\combi{n}{k}=\combi{n+1}{k}$の関係を示しています。
 たとえば$n=6$, $k=5$のとき、
 \[
@@ -204,19 +199,14 @@ $n=k$のとき成り立つとすると$n=k+1$のとき、
 です。
 この形をパスカルの3角形といいます。
 またこの関係式や図から任意の$\combi{n}{k}$が自然数であることを見てとれます。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/combi.pdf}
-  \caption{パスカルの3角形}
-  \label{combi}
-\end{figure}
+\image{combi.pdf}{パスカルの3角形}
 \begin{lemma}
 \label{combi_zero}
 素数$p$と$0 < k < p$となる自然数$k$に対して$\combi{p}{k}$は$p$の倍数である。
 \end{lemma}
 なぜなら$\combi{p}{k}=\frac{p!}{k!(p-k)!}$の分子$p!$は$p$の倍数で、分母$k!(p-k)!$に$p$は出てこないので$p$が約分されないからです。\qed
 
-図\ref{combi}では$n=2, 3, 5, 7$のとき両側の1以外は$n$の倍数であることを確認できます。
+図\ref{fig:combi.pdf}では$n=2, 3, 5, 7$のとき両側の1以外は$n$の倍数であることを確認できます。
 $n$が4や6などの合成数のときは$n$の倍数になっていないですね。
 \begin{lemma}
 \label{frobenius}

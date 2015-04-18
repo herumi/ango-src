@@ -32,12 +32,7 @@ ElGamal暗号は有限体という枠組みの中で構成されるのでその用語の説明から始めます。
 5時間後の24時になると0時に戻ります。
 50時間後なら2日と2時間後なので21時になります。
 つまり時刻は24で割った余りを考えています。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/tokei.pdf}
-  \caption{時刻と余り}
-  \label{tokei}
-\end{figure}
+\image{tokei.pdf}{時刻と余り}
 一般に整数$a$を整数$p(>0)$で割った余りを$a \bmod p$と書くことにします。
 より正確に書くと$a = qp + r$ ($0 \leq r < p$)となるような整数$q$, $r$を選んだとき$r$を余りと定義します。
 $a$が負のときでも余りは常に0以上$p$未満になるように選びます。
@@ -96,19 +91,13 @@ $2^a \bmod 13$ & 1 & 2 & 4 & 8 &  3 & 6 & 12 & 11 & 9 & 5 & 10 & 7 & 1 & 2 & 4\\
 \item[1.] 整数$g$, $p$を二人の間で決めて平文で共有する。
 $g$, $p$の条件は後述します。
 \item[2.] Aは秘密鍵（秘密の値）$a$を決め公開鍵$K_A := g^a \bmod p$を求めてBに渡す。\\
-ここで「$:=$」は左辺を右辺で定義するという記号です。
 \item[3.] Bは秘密鍵$b$を決め公開鍵$K_B := g^b \bmod p$を求めてAに渡す。\\
 以後 ${}\bmod p$を省略します。
 \item[4.] Aは$a$とBからもらった$K_B$を使って${K_B}^a = (g^b)^a$を求める。
 \item[5.] Bは$b$とAからもらった$K_A$を使って${K_A}^b = (g^a)^b$を求める。
 \end{itemize}
 ${K_B}^a=(g^b)^a=g^{ab}=(g^a)^b={K_A}^{b}$なのでAとBは同じ値を共有できました。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/dh.pdf}
-  \caption{DH鍵共有}
-  \label{dh-sharing}
-\end{figure}
+\image{dh.pdf}{DH鍵共有}
 \section{鍵共有のための仮定と条件}
 \label{dh-param}
 AさんとBさんは同じ値$g^{ab}$を共有できましたが、これは安全な方法なのでしょうか。
@@ -168,20 +157,10 @@ DH鍵共有はCDH仮定の元で安全に秘密の数値を共有できることが分かりました。
 ここで安全というのは、二人がやりとりする経路を攻撃者が盗聴していたとしても
 $g^{ab}$は二人だけしか知らないようにできるという意味です。
 しかし、攻撃者が盗聴だけでなく改竄（かいざん）までしていた場合の安全性を保証しているわけではありません。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/dh-ok.pdf}
-  \caption{正常時のDH鍵共有}
-  \label{dh-ok}
-\end{figure}
+\image{dh-ok.pdf}{正常時のDH鍵共有}
 正常時はAの公開鍵$K_A$がBに、Bの公開鍵$K_B$がAに正しく送信されています。
 このときは安全に共有できます。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/dh-ng.pdf}
-  \caption{改竄時のDH鍵共有}
-  \label{dh-ng}
-\end{figure}
+\image{dh-ng.pdf}{改竄時のDH鍵共有}
 しかし、途中経路に通信内容を改竄できる攻撃者がいたとします。
 攻撃者は適当な数$c$, $d$を決めてAから来た$K_A$を受け取り$g^c$をBに渡します。
 そしてBからきた$K_B$を受け取り$g^d$をAに渡します。
@@ -455,12 +434,7 @@ ElGamal暗号はCDH仮定の元で秘密鍵を知らない人は復号できないことが知られています。
 
 「2個の異なる平文$m$, $m'$およびこのどちらかを暗号した$c$が与えられたとする。
 このときどちらの平文を暗号化したものか当てよ。」
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/ind-atk.pdf}
-  \caption{当てっこ問題}
-  \label{ind-atk}
-\end{figure}
+\image{ind-atk.pdf}{当てっこ問題}
 当てっこ問題の出題者、つまり暗号文を作る人を挑戦者といいます。
 暗号が安全であるためには攻撃者が負けること、つまりこの当てっこ問題ができないことが望まれます。
 できないというのは攻撃者がどんなにがんばったとしても、何も考えずに答えて当たる確率$1/2$と殆ど同じにしかできないという意味です。
@@ -498,12 +472,7 @@ ElGamal暗号はDDH仮定の元で強秘匿性を持つのでした。
 たとえば秘密の通信をしている二人の間に攻撃者がいて$\Enc(m)=(c_1,c_2)$を盗聴し、
 $(c_1, 10c_2)$と変更して相手に渡したと考えてみましょう。
 すると受信者は$\Dec(c_1, 10c_2)=10my^r/g^{rx}=10m$と復号してしまいます。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/elgamal-weak.pdf}
-  \caption{ElGamal暗号に対する攻撃者による平文の改竄}
-  \label{elgamal-weak}
-\end{figure}
+\image{elgamal-weak.pdf}{ElGamal暗号に対する攻撃者による平文の改竄}
 もともと$m$という値だったのが$10m$という値に変わりました。
 もし$m$が商品の値段だったら10倍の値段になってしまったのです。
 これでは困ります。平文が分からないだけでなく、その値を操作されてもいけないのです。
@@ -523,13 +492,8 @@ CCAには2種類あります。
 問い合わせが攻撃対象の暗号文$c$が与えられる前にしかできないものをCCA1といいます。
 $c$が与えられてからも、それに応じた戦略を立てて問い合わせする攻撃を適応的選択暗号文攻撃CCA2といいます。
 当然CPAよりもCCA1, CCA2の方が攻撃者の攻撃能力が強い状況です。
-\ref{sec:ind}節の当てっこ問題でCCAを考えると図\ref{fig:cca}の様に点線で囲まれた部分が増えます。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/ind-cca.pdf}
-  \caption{CCA版当てっこ問題}
-  \label{fig:cca}
-\end{figure}
+\ref{sec:ind}節の当てっこ問題でCCAを考えると図\ref{fig:ind-cca.pdf}の様に点線で囲まれた部分が増えます。
+\image{ind-cca.pdf}{CCA版当てっこ問題}
 喩えるなら、CCA1は本試験の前に模擬試験の問題を考えて先生に答えを聞く状況です。
 CCA2は本試験が始まってからも試験中にしつこく類題を出して先生に答えを聞いてから試験問題を考えている状況です。
 CCA1はまだしもCCA2はかなりずるい？です。
@@ -671,12 +635,7 @@ AはBの公開鍵を持っていないのでAはBからBの公開鍵をもらわなければなりません。
 しかしデジタル署名には公開鍵が必要です。
 その公開鍵はどうやって送るのでしょう。
 またもや元に戻ってしまいました。互いが互いを必要としていて循環しています。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/pki.pdf}
-  \caption{公開鍵とデジタル署名と認証局}
-  \label{pki}
-\end{figure}
+\image{pki.pdf}{公開鍵とデジタル署名と認証局}
 インターネット上のBのサイトが本当にそのBのものなのかは暗号技術では知りようがありません。
 Bの公開鍵が本当にBのものであると証明するものを公開鍵証明書といいます。
 一般的には国際電気通信連合（ITU : International Telecommunication Union）が定めたX.509という規格が使われます。

@@ -10,12 +10,7 @@
 ある企業内で社内の特定の人だけが見られるようにした文章を配布したいとしましょう。
 ここで特定の条件は、たとえば「人事部であり、かつ部長である」とか「開発部である」というものだったとします。
 「人事部である」といった条件を属性と呼びます。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/abe.pdf}
-  \caption{復号する人を属性で制御する}
-  \label{abe}
-\end{figure}
+\image{abe.pdf}{復号する人を属性で制御する}
 もちろんその特定の人を全て列挙し、それぞれの人に暗号化して文章を送れば従来の暗号方式でも実現できます。
 ただ対象人数が多いと煩雑になったり、対象者が属性でしか分からなかったりするかもしれません。
 個別に暗号化するのではなく属性に対するアクセス権をシステムのアクセス権を用いて実現することもあります。
@@ -83,12 +78,7 @@ f(x):=r_0 + r_1 x + \dots + r_{k-1}x^{k-1}= \sum_{u=0}^{k-1} r_i x^u
 
 $f(x)$は$k-1$次多項式ですから、$n$個のうち$k$個の異なる$(x_j, y_j)$が決まるとその点を通る$f(x)$が一意に決まります。
 $f(x)$が確定するので特に$f(0)=r_0=s$を復元できます。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/ss.pdf}
-  \caption{3次多項式による$(4,n)$秘密分散}
-  \label{ss}
-\end{figure}
+\image{ss.pdf}{3次多項式による$(4,n)$秘密分散}
 \section{$(k,n)$閾値法の復号}
 $k$個の異なる$(x_j, y_j)$を集めたときの復号方法について詳しく調べます。
 まず$k=2$のときを考えます。$f(x)$は1次多項式、つまり直線です。
@@ -278,12 +268,7 @@ X=
 \]
 という行列のうち、どの3行を取り出してもその逆行列はVandermonde行列の形をしていて逆行列を求められたのでした。
 この性質が3個集まると復号できるという性質になっています。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/extract.pdf}
-  \caption{どの3個の行を取り出しても逆行列がある}
-  \label{extract}
-\end{figure}
+\image{extract.pdf}{どの3個の行を取り出しても逆行列がある}
 ではこの行列の形をもっと別のものに換えたらどうなるでしょう。
 たとえば$s$, $r_0$, $r_1$, $r_2$を秘密とし
 \[
@@ -330,12 +315,7 @@ orに対してはそれぞれに$s$を割り当てます。
 最終的に$(A,B,C,D,E)=(r_1,r_1+s,r_2,r_2,r_2+s)$を渡せばよいです。
 実際にこのように配布すると$A$と$B$を持っているか、
 「$C$または$D$」かつ$E$を持っているときに$s$を復元できます。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/access-tree.pdf}
-  \caption{アクセス構造$(A \wedge B) \vee ((C \vee D) \wedge E)$を表す木}
-  \label{access-tree}
-\end{figure}
+\image{access-tree.pdf}{アクセス構造$(A \wedge B) \vee ((C \vee D) \wedge E)$を表す木}
 属性のandとorの任意の組み合わせによるアクセス木（access tree）で表された復号条件をポリシー（Policy）といいます。
 ポリシーはどのような鍵を持っていれば復号できるかを決める情報です。
 ポリシーを元に秘密分散を行うことを線形秘密分散法（LSSS : Linear Secret Sharing Scheme）といいます。
@@ -348,12 +328,7 @@ KP-ABEの例としては動画などのコンテンツ配信が考えられます。
 事前に「アニメ」、「SF」、「映画」、「ホラー」などの属性を決めてコンテンツを暗号化します。
 ユーザは「SF and アニメ」を見たいというポリシーで契約し、対応する秘密鍵をもらいます。
 そうするとプリペイド形式でポリシーにマッチしたコンテンツだけを自由に見られます。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/contents.pdf}
-  \caption{条件指定によるコンテンツ受信}
-  \label{contents}
-\end{figure}
+\image{contents.pdf}{条件指定によるコンテンツ受信}
 
 \section{notをサポート}
 前節の属性ベース暗号ではポリシーの条件にandやorの組み合わせを使えました。

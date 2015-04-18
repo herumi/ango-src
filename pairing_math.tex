@@ -18,12 +18,7 @@ $a_i \ne 0$となる最小の$i$を$f$の$x=a$における位数といい
 \]
 と書きます。
 たとえば$f(x)=x^3$のとき、零点は$x=0$で$\ord{0}{x^3}=3$です。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/zero.pdf}
-  \caption{関数の零点とその位数}
-  \label{fig:zero}
-\end{figure}
+\image{zero.pdf}{関数の零点とその位数}
 位数はその点で関数$f$が$x$軸とどれぐらいで接しているかを表しています。
 直線$y=x$と直線$y=0$は原点$(0,0)$で交差しています。
 関数$y=x^n$は$x$軸と$(0,0)$で$n$重に接しているといいます。
@@ -121,12 +116,7 @@ y^2=((s+e_1)-e_1)((s+e_1)-e_2)((s+e_1)-e_3)=s(s+e_1-e_2)(s+e_1-e_3)
 ここで$c$は$c:=(e_1-e_2)(e_1-e_3)\ne 0$という定数です。
 つまり点$P_1$の付近で楕円曲線$E$の方程式は$y^2=c(x-e_1)$と近似でき、非常に小さいパラメータ$t$を用いて$P_t:=(t^2/c+e_1,t) \in E$と表現できます。
 このとき$y$座標の値を返す関数$y$は$t$そのものになります。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/ec-zero.pdf}
-  \caption{点$P_1$付近でのパラメータ$t$による表示}
-  \label{ec-zero}
-\end{figure}
+\image{ec-zero.pdf}{点$P_1$付近でのパラメータ$t$による表示}
 $P_1$の付近では$t=0$なのでその位数は1です。
 $P_2$, $P_3$についてもそれぞれの点の付近でパラメータをとって考えると同様に位数は1です。
 よって$\ord{P_i}{y}=1$。
@@ -269,12 +259,7 @@ f(\Div(g))&
 \begin{definiton}
 楕円曲線$E$と素数$m$に対して$E[m]:=\Set{P \in E|mP=O}$とします。
 $E[m]$の点を$m$等分点といいます。$m$等分点は$m^2$個あります。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/mtorsion.pdf}
-  \caption{複素トーラスにおける$4$等分点の集合$E[4]$}
-  \label{mtorsion}
-\end{figure}
+\image{mtorsion.pdf}{複素トーラスにおける$4$等分点の集合$E[4]$}
 $E[m]$の2点$P$, $Q$をとり
 因子$D_P:=m(P)-m(O)$, $D_Q:=m(Q)-m(O)$を考えます。
 $\deg(D_P)=\deg(D_Q)=0$かつ$mP=mQ=O$なので定理\ref{div_func}より、ある関数
@@ -398,12 +383,7 @@ $mP=O$なら、
 となり$f^{(m)}_P$が求めたい関数$f_P$です。
 
 小さい$i$から順に$f^{(i)}_P$を構成するために楕円曲線上の点の加算と直線の関係を見直します。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/miller-line.pdf}
-  \caption{点$P$と$Q$を通る直線および$P+Q$と$-(P+Q)$を通る直線}
-  \label{miller-line}
-\end{figure}
+\image{miller-line.pdf}{点$P$と$Q$を通る直線および$P+Q$と$-(P+Q)$を通る直線}
 \ref{sec:ec_add}節で紹介したように点$P=(x_1,y_1)$, $Q=(x_2,y_2)$を通る直線は
 \[
 y=\lambda (x-x_1)+y_1, \quad \text{ただし} \lambda:=\frac{y_2-y_1}{x_2-x_1}

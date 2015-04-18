@@ -21,16 +21,11 @@
 楕円曲線という一つの用語です。
 
 今までにいろいろな暗号プロトコルが出てきたので整理するためにまとめてみました。
-図\ref{protocol}は実現したい機能（横軸）と、実現手段（縦軸）の2軸で示しています。
+図\ref{fig:protocol.pdf}は実現したい機能（横軸）と、実現手段（縦軸）の2軸で示しています。
 「鍵共有」や、「公開鍵暗号」など長方形の枠で囲ったものが機能面の名前、左の縦に使っている主な道具で分けています。
 有限体を使った暗号と楕円曲線を使った暗号はほぼ対応していることが分かります。
 後半の章で紹介するペアリングを使うとそれらとは違う機能を実現できます。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/protocol.pdf}
-  \caption{機能と道具の観点からみた主な暗号プロトコル}
-  \label{protocol}
-\end{figure}
+\image{protocol.pdf}{機能と道具の観点からみた主な暗号プロトコル}
 まだ説明していない用語やこのテキストでは紹介しないものも含んでいます。
 もちろんこの枠に入らない暗号もたくさんあります。
 また、ある機能を持つ暗号がその道具を使わないとできないというわけでもありません。
@@ -41,12 +36,7 @@ ElGamal暗号は有限体を使って構成されていました。
 有限体$\FF_p$の世界は数直線上を$p$進むと元に戻ります。
 これは0と$p$のところをつなげると円周をぐるぐる回っていることになります。
 円周という線の上を動いているので1次元の世界です。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/circle.pdf}
-  \caption{$\FF_p$上の加算は円周をぐるぐる回っている}
-  \label{circle}
-\end{figure}
+\image{circle.pdf}{$\FF_p$上の加算は円周をぐるぐる回っている}
 これを2次元にすると別の暗号を作れるでしょうか。
 1次元では円周だったので2次元ならビーチボールのような球面を考えればよさそうです。
 ちょっと考えるとぐるぐる回ってうまくいきそうに思います。
@@ -61,12 +51,7 @@ ElGamal暗号は有限体を使って構成されていました。
 これはHairy ball（毛玉）の定理という幾何学の定理により示されています。
 球面を頭、水の流れを髪の毛にたとえると、特別な点は頭のつむじに相当します。
 頭には（髪の毛があれば）つむじが必ずあるという定理です。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/sphere.pdf}
-  \caption{球面と浮輪の上の水の流れ}
-  \label{shpere}
-\end{figure}
+\image{sphere.pdf}{球面と浮輪の上の水の流れ}
 そしてその特別な点ではきれいな足し算の構造が壊れることが示されます。
 したがって球面上にはきれいな足し算の構造を入れられません。
 球面ではなく浮輪の表面だと涌きだし口や吸い込み口のない水の流れを作れます。
@@ -81,33 +66,18 @@ ElGamal暗号は有限体を使って構成されていました。
 ゲームのキャラクターたちは長方形の世界地図の中を移動します。
 パッと見ると普通の世界地図なのですが、右へ進んで右端に来ると左端から出てきます。
 上に進んで上端に着くと下端から出てきます。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/dq3.pdf}
-  \caption{ドラクエ3の世界地図}
-  \label{dq3}
-\end{figure}
+\image{dq3.pdf}{ドラクエ3の世界地図}
 これは、この惑星？がもし3次元空間の中に存在していたら、どんな形をしているでしょう。
 右端と左端が同じなのでくっつけると円筒になります。
 メルカトル図法による普通の世界地図の両端をくっつけたのとそっくりです。
 ただ世界地図と違ってドラクエ3では上端と下端も同じなので、それらもくっつける必要があります。
 すると（多少曲げないといけませんが）浮輪の表面の形になります。
 なんとドラクエは球面ではなく、浮輪の表面の世界だったのです。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/dq3-2.pdf}
-  \caption{ドラクエ3の世界地図の端を張り付ける}
-  \label{dq3-wrap}
-\end{figure}
+\image{dq3-2.pdf}{ドラクエ3の世界地図の端を張り付ける}
 浮輪の表面を数学の言葉でトーラス（torus）といいます。
 トーラス上の足し算は分かりにくくてもドラクエ世界上の足し算は容易に考えられます。
 世界を長方形$OABC$とします。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/elliptic.pdf}
-  \caption{トーラス上の足し算}
-  \label{elliptic}
-\end{figure}
+\image{elliptic.pdf}{トーラス上の足し算}
 2点$P$, $Q$に対してその足し算$P+Q$を点$P$から$\overrightarrow{OQ}$だけ進めということにします。
 つまり$O$, $P$, $P+Q$, $Q$が平行四辺形になるように$P+Q$を決めます。
 そのとき、$P+Q$が長方形$OABC$をはみ出たら回り込ませます。
@@ -133,12 +103,7 @@ $n$倍の計算は有限体のときの巾乗の計算と同様にバイナリ法（\ref{binary-method}節参
 
 \section{楕円離散対数問題}
 楕円曲線上でゲームのキャラクターが歩き回ることを考えましょう。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/ec_walk.pdf}
-  \caption{楕円曲線上を歩く}
-  \label{ec_walk}
-\end{figure}
+\image{ec_walk.pdf}{楕円曲線上を歩く}
 キャラクターの一歩が$P$だとします。
 原点から2歩歩くと$2P$の位置にいます。
 どんどん進んで端に到達すると逆から出てきます。
@@ -275,19 +240,9 @@ PFS（Perfect Forward Secrecy）ともいわれます。
 様々な暗号に対してどのようにしたら前方秘匿性の機能を持たせられるか研究されています。
 
 先ほどのRSA暗号で$K$を暗号化している場合はFSは保たれません。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/no-pfs.pdf}
-  \caption{RSA暗号を用いたClientKeyExchange}
-  \label{no-pfs}
-\end{figure}
+\image{no-pfs.pdf}{RSA暗号を用いたClientKeyExchange}
 しかし毎回DH鍵共有で秘密鍵$K$を作ればRSA暗号の秘密鍵とは無関係なので解読できません。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/pfs.pdf}
-  \caption{DH鍵共有を用いたClientKeyExchange}
-  \label{pfs}
-\end{figure}
+\image{pfs.pdf}{DH鍵共有を用いたClientKeyExchange}
 つまり、PFSが保たれます。
 有限体上のDH鍵共有は処理が重たいためあまり使われていませんでした。
 しかし、楕円DH鍵共有はRSA暗号に比べてもそれほど重たくはないため徐々に普及しています。
@@ -302,10 +257,10 @@ GoogleのGmailは2011年にPFSに対応しました。
   \centering
   \includegraphics[scale=0.6]{img/google.png}
   \caption{2014年3月に\texttt{https://www.google.co.jp/}に接続したときの情報}
-  \label{google}
+  \label{fig:google.png}
 \end{figure}
 FirefoxやChromeなどのブラウザで\texttt{https://www.google.co.jp/}に接続し、鍵アイコンをクリックすると接続に使われた暗号アルゴリズムを確認できます。
-図\ref{google}を見ると\texttt{ECDHE\_ECDSA}という鍵交換メカニズムが使われていることが分かります。
+図\ref{fig:google.png}を見ると\texttt{ECDHE\_ECDSA}という鍵交換メカニズムが使われていることが分かります。
 \texttt{ECDHE}はECDH鍵共有、
 \texttt{ECDSA}は前節で紹介した楕円曲線版DSAのことです。
 \texttt{ECDHE}の最後の\texttt{E}はEphemeral（一時的な、短命の）という単語を指します。
