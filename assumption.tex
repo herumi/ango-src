@@ -42,12 +42,7 @@ a(xP, 0, P)+b(0, yP, P)=(axP, byP, Q)
 \]
 とできるか、すなわち
 3点$(0,0,0)$, $(xP,0,P)$, $(0,yP,P)$を含む平面上に$(axP,byP,Q)$があるか判定せよという問題です。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/dlin.pdf}
-  \caption{DLIN仮定の解釈}
-  \label{fig:dlin}
-\end{figure}
+\image{dlin.pdf}{DLIN仮定の解釈}
 
 \section{パラメータつき問題}
 有限体や楕円曲線のDLPやDH問題は入力値が2個や3個、ペアリングのCBDH問題は4個と入力値の個数は一定でした。
@@ -240,12 +235,7 @@ DH問題より易い問題ので私は``weak''と名付けましたが、その問題を安全性仮定に使うと
 最後に\ref{BGW}節の$n$-BDHE問題を振り返りましょう。
 $n$-DH問題は与えられた``ベクトル"$P$, $aP$, \dots, $a^nP$の右隣、$n$-DHI問題は左隣の値を求める問題と解釈します。
 すると$n$-BDHE問題は左右に連続する``ベクトル"が与えられたときに真ん中の値を求める問題とペアリングを合成した形にみえます。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/bdhe.pdf}
-  \caption{$n$-DHと$n$-DHIと$n$-BDHEの関係}
-  \label{n-bdhe}
-\end{figure}
+\image{bdhe.pdf}{$n$-DHと$n$-DHIと$n$-BDHEの関係}
 これらの問題の派生系もいくつかあります。
 一般的にできるだけ単純でよく知られた問題を安全性の根拠におくのがよいです。
 

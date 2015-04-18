@@ -16,13 +16,7 @@ Aの秘密鍵をBに渡すのは好ましくありません。
 そうするとAはサーバからデータをダウンロードし、自身の秘密鍵で復号して
 Bの公開鍵で暗号化し、再度サーバにアップロードしなくてはなりません。
 データを共有したい人が増えるとこれは大変です。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/proxy0.pdf}
-  \caption{暗号化データを共有したい}
-  \label{fig:proxy0}
-\end{figure}
-
+\image{proxy0.pdf}{暗号化データを共有したい}
 プロキシ暗号を使うとサーバ上でデータを復号しなくてもBが復号できるように変換できます。
 その作業をサーバに委ねることができるのでプロキシ（代理人）暗号といいます。
 
@@ -34,12 +28,7 @@ AはBの公開鍵暗号$K_B$と自身の秘密鍵$S_A$から再暗号化鍵$R_{A\rightarrow B}$を作り
 \end{align*}
 あたかも、一度Aの秘密鍵で復号してBの公開鍵で暗号化したかのように見えるのがポイントです。
 なお、後述するように再暗号化する前とした後で暗号方式が異なることがあります。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/proxy.pdf}
-  \caption{プロキシ暗号}
-  \label{fig:proxy}
-\end{figure}
+\image{proxy.pdf}{プロキシ暗号}
 
 \section{最初の方式}
 1996年、満保雅浩氏、岡本栄司氏が代理署名という概念を提案し、1998年、Blaze,  Bleumer, Straussが原子的プロキシ暗号（Atomic Proxy Cryptography）を提案します~\cite{Blaze98divertibleprotocols}。

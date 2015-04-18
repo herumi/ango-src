@@ -276,12 +276,7 @@ R_i=a_i P + b_i Q = a_j P + b_j Q=R_j
 Q = \frac{a_i - a_j}{b_j - b_i}P
 \]
 となって離散対数問題が解けました（運悪く$b_i=b_j$だったときはやり直します）。
-\begin{figure}[H]
-  \centering
-  \includegraphics{img/rho.pdf}
-  \caption{$\rho$法による$R_i$の点列のイメージ}
-  \label{rho}
-\end{figure}
+\image{rho.pdf}{$\rho$法による$R_i$の点列のイメージ}
 このアルゴリズムは集合$X$にランダムに点を増やして、たまたま$X$の中に同じ点が見つかるまで繰り返します。
 \ref{hash}節のハッシュ関数のところで紹介したように、見つかるのに必要なステップ数は$O(\sqrt{G\text{の位数}})$です。
 $\rho$法と呼ばれる名前の由来は、$\rho$の字の形がしっぽのところから登ってぐるぐる回っているうちに同じところに衝突した図を表しているからだそうです。
