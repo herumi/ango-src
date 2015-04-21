@@ -28,7 +28,7 @@ ango.pdf: ango.tex $(_TEX) $(IMG) ref.bib add_idx.py
     platex ango.tex
     jbibtex ango
     platex ango.tex
-    mendex -c -g -S ango.idx
+    mendex -c -g -S -s dot.ist ango.idx
     ptex2pdf -l -ot -synctex=1 ango.tex
 
 _intro.tex: intro.tex

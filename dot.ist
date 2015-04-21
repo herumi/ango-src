@@ -1,0 +1,25 @@
+preamble
+"\n\\begin{theindex}\n"
+postamble
+"\n\n \\end{theindex}\n"
+item_x0   "\n\\item "
+item_x1   "\n \\subitem "
+item_x2   "\n  \\subsubitem "
+delim_0   "\\dotfill "
+delim_1   "\\dotfill "
+delim_2   "\\dotfill "
+%
+% mendex
+lethead_prefix
+"\\hbox to \\linewidth{\\hfill\\sffamily\\bfseries\\gtfamily\\small "
+lethead_suffix
+"\\hfill}\\par\n\\nopagebreak\n"
+lethead_flag       1
+symbol             "‹L†^”š"
+letter_head        2
+% makeindex
+heading_prefix
+"{\\vbox{\\hbox to \\linewidth{\\sffamily\\bfseries\\gtfamily\\small "
+heading_suffix
+"\\ \\hskip\\fill}\\vskip1pt\\hrule}}\\nopagebreak\n"
+headings_flag      1
