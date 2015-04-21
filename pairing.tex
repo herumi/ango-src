@@ -121,17 +121,14 @@ s_A &=e(K_A, P_B)=e(s P_A, P_B)=e(P_A, P_B)^s=e(P_A, s P_B)\\
 が成り立つので二人の間で秘密の値を共有できる。
 \end{itemize}
 このID鍵共有の安全性については後ほど触れるとして、ECDH鍵共有との違いを比べます。
-\begin{table}[H]
-\begin{center}
-\caption{ECDH鍵共有とID鍵共有の比較}
+\tablecap{ECDH鍵共有とID鍵共有の比較}{
 \begin{tabular}{|c|c|c|c|}
 \hline
            & 自分の秘密鍵 & 相手の公開情報 & 共有鍵 \\\hline
 ECDH鍵共有 & $a$    & $bP$           & $abP$ \\\hline
 ID鍵共有   & $sH(A)$ & $H(B)$ & $e(H(A), H(B))^s$ \\\hline
 \end{tabular}
-\end{center}
-\end{table}
+}
 ECDH鍵共有では秘密鍵$a$や$b$を先に（自由に）決めてから、公開鍵$aP$や$bP$を作ります。
 したがって、$aP$や$bP$を自分の狙った数値にできません。
 それに対して、ペアリングを使ったID鍵共有では公開情報$A$や$B$を先に決めてから秘密鍵$sH(A)$や$sH(B)$を作ります。
