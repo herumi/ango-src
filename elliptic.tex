@@ -236,7 +236,7 @@ AやBが重要な人物の場合、通信の記録が保持されていてもおかしくはありません。
 PFS（Perfect Forward Secrecy）ともいわれます。
 様々な暗号に対してどのようにしたら前方秘匿性の機能を持たせられるか研究されています。
 
-先ほどのRSA暗号で$K$を暗号化している場合はFSは保たれません。
+先ほどのRSA暗号で$K$を暗号化している場合はPFSは保たれません。
 \image{no-pfs.pdf}{RSA暗号を用いたClientKeyExchange}
 しかし毎回DH鍵共有で秘密鍵$K$を作ればRSA暗号の秘密鍵とは無関係なので解読できません。
 \image{pfs.pdf}{DH鍵共有を用いたClientKeyExchange}
