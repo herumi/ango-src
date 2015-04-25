@@ -314,8 +314,8 @@ $R_p$‚©‚çƒ‰ƒ“ƒ_ƒ€‚É$s$‚ğ‚Æ‚èA“K“–‚È‰ñ”‚¾‚¯$a_i \in F_p$‚ğƒ‰ƒ“ƒ_ƒ€‚ÉA$e_i \in 
 \section{RLWE‰¼’è‚É‚æ‚éŠ®‘S€“¯Œ^ˆÃ†}
 \label{rlwe}
 RLWE‚ğg‚Á‚Ä€“¯Œ^ˆÃ†iHE : Homomorphic Encryptionj‚ğ\¬‚µ‚Ü‚·B
-\begin{itemize}
-\item[] \textbf{Œ®¶¬}F
+\mydescription{
+\item[Œ®¶¬]
 $n$‚ğ2‚Ì‹ĞA$p$‚ğ$p-1$‚ª$2n$‚Ì”{”‚Å‚ ‚é‚æ‚¤‚È‘f”‚Æ‚µ‚ÄŠÂ$R$, $R_p$‚ğì‚éB
 $p$‚æ‚è¬‚³‚¢‘f”‚ğ$t$‚Æ‚·‚éB
 $R_t:=(\ZZ/t\ZZ)[x]/(x^n+1)$‚ª•½•¶‹óŠÔ‚Æ‚È‚éB
@@ -324,13 +324,13 @@ $t$‚ğ$p$‚æ‚è‚Ç‚ê‚®‚ç‚¢¬‚³‚­‚Æ‚é‚©‚ÍŒãq‚µ‚Ü‚·B
 $s \leftarrow \chi$‚ğ”é–§Œ®‚Æ‚·‚éB$R_p$‚©‚ç$a_1$‚ğƒ‰ƒ“ƒ_ƒ€‚É‘I‚ÑA$e \leftarrow \chi$‚ğŒë·‚ÆŒÄ‚ÔB
 $a_0:=-(a_1 s + te)$‚Æ$a_1$‚ğŒöŠJŒ®‚Æ‚·‚éB
 ˆÈ‰º‚ÌŒvZ‚Í$R_p$‚Ål‚¦‚Ü‚·B
-\item[] \textbf{ˆÃ†‰»}F
+\item[ˆÃ†‰»]
 •½•¶$m \in R_t$‚É‘Î‚µ‚ÄA$e_1, e_2, e_3 \leftarrow \chi$‚ğ‘I‚ÑA
 \[
 \Enc(m):=(m+a_0 e_1+t e_3,a_1 e_1+t e_2)
 \]
 ‚Æ‚·‚éB
-\item[] \textbf{•œ†}F
+\item[•œ†]
 ˆÃ†•¶‚ª$c:=(c_0, c_1, \dots, c_k)$‚ÌŒ`‚Ì‚Æ‚«
 \[
 \Dec(c):=\sum_{i=0}^k c_i s^i \in R_p
@@ -344,7 +344,7 @@ $k'':=\max(k,k')$‚Æ‚µA’Z‚¢•û‚ÌƒxƒNƒgƒ‹‚É0‚ğ’Ç‰Á‚µ‚Ä“¯‚¶’·‚³$k''$‚ÌƒxƒNƒgƒ‹‚É‚·‚
 \Add(c,c'):=(c_0+c'_0, \dots, c_{k''}+c'_{k''})
 \]
 ‚Æ‚·‚éB
-\item[] \textbf{ˆÃ†•¶‚ÌæZ}F
+\item[ˆÃ†•¶‚ÌæZ]
 ˆÃ†•¶$c:=(c_0, \dots, c_k)$, $c':=(c'_0, \dots, c'_{k'})$‚É‘Î‚µ‚Ä
 \begin{align}\label{enc_product}
 \hat{c}_i:=\sum_{j=0}^{i} c_j c'_{i-j}
@@ -366,7 +366,7 @@ $k'':=\max(k,k')$‚Æ‚µA’Z‚¢•û‚ÌƒxƒNƒgƒ‹‚É0‚ğ’Ç‰Á‚µ‚Ä“¯‚¶’·‚³$k''$‚ÌƒxƒNƒgƒ‹‚É‚·‚
 \[
 \Mul(c,c')=(\hat{c}_0,\hat{c}_1,\hat{c}_2)=(c_0c'_0, c_0c'_1+c_1c'_0, c_1c'_1).
 \]
-\end{itemize}
+}
 ‚Ü‚¸³‚µ‚­•œ†‚Å‚«‚é‚±‚Æ‚ğŠm”F‚µ‚Ü‚·B
 \[
 (c_0,c_1):=(m+a_0 e_1+t e_3,a_1 e_1+t e_2)
