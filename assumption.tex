@@ -183,26 +183,26 @@ $n$-weak DH問題は今は$n$-DHI（DH Inversion）問題と呼ばれます。
 
 \section{$n$-DHI問題と$n$-SDH問題}
 逆数の形を秘密鍵に使うと\ref{OSK-BF}節とは異なる構造のIDベース暗号を構成できます。
-\begin{itemize}
-\item[] \textbf{鍵生成}：
+\mydescription{
+\item[鍵生成]
 楕円曲線$E$とその点$P$をとる。
 $p:=|\gen{P}|$とし、ハッシュ関数$h:\Set{ID} \rightarrow \FF_p$を選ぶ。
 整数$s$と点$Q \in \gen{P}$をランダムにとり$(P,s)$を秘密鍵、$(Q,sQ, g:=e(P,Q))$を公開鍵とする。
-\item[] \textbf{ユーザ鍵生成}：
+\item[ユーザ鍵生成]
 各ユーザ$u$に対して$h_u:=h(ID_u)$として
 \[
 S_u:=\frac{1}{h_u+s}P
 \]
 を秘密鍵として渡す。
-\item[] \textbf{ユーザ$u$に対する暗号化}：
+\item[ユーザ$u$に対する暗号化]
 平文$m$に対して整数$r$をランダムにとり、
 \[
 (C_1,c_2):=(r(h_uQ + sQ), mh(g^r))
 \]
 を暗号文とする。
-\item[] \textbf{復号}：
+\item[復号]
 ユーザ$u$は暗号文$(C_1,c_2)$に対して$h$を使って$c_2/h(e(S_u,C_1))$により平文を求める。
-\end{itemize}
+}
 うまく復号できることは
 \[
 \frac{c_2}{h(e(S_u,C_1)}=\frac{mh(g^r)}{h\left(e(\frac{1}{h_u+s}P,r(h_u+s)Q)\right)}=\frac{mh(g^r)}{h(e(P,Q)^r)}=m

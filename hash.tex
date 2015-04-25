@@ -238,20 +238,23 @@ MAC‚ÆƒfƒWƒ^ƒ‹–¼‚ÌŠÖŒW‚ÍA‹¤’ÊŒ®ˆÃ†‚ÆŒöŠJŒ®ˆÃ†‚ÌŠÖŒW‚É—‚Ä‚¢‚Ü‚·B
 \subsection{RSA-FDH–¼}
 ‚Ü‚¸‚Í®‚ª”äŠr“IŠÈ’P‚ÈRSAˆÃ†‚ÆƒnƒbƒVƒ…ŠÖ”‚ğ‘g‚İ‡‚í‚¹‚Äì‚ç‚ê‚½RSA-FDHiFDH : Full Domain Hashj–¼‚ğĞ‰î‚µ‚Ü‚µ‚å‚¤~\cite{Bellare:1993}B
 
+\mydescription{
+\item[Œ®¶¬]
 RSAˆÃ†‚ÌŒöŠJŒ®‚ğ$(n,e)$A”é–§Œ®‚ğ$d$‚Æ‚µ‚Ü‚·B
 X‚ÉFull DomainƒnƒbƒVƒ…ŠÖ”$H$‚ğ—pˆÓ‚µ‚Ü‚·B
 Full Domain‚Æ‚ÍƒnƒbƒVƒ…’l‚ªŒöŠJŒ®$n$‚Æ“¯‚¶ƒTƒCƒY‚Æ‚È‚éƒnƒbƒVƒ…ŠÖ”‚Ì‚±‚Æ‚Å‚·B
-\begin{itemize}
-\item[] \textbf{ƒƒbƒZ[ƒW$m$‚É‘Î‚·‚é–¼}F
+\item[–¼]
+ƒƒbƒZ[ƒW$m$‚É‘Î‚µ‚Ä”é–§Œ®$d$‚ğg‚Á‚Ä–¼$s$‚ğŒvZ‚µ‚Ü‚·B
 \[
 s:=H(m)^d \bmod{n}.
 \]
-\item[] \textbf{ƒƒbƒZ[ƒW$m$‚É‘Î‚·‚é$s$‚ÌŒŸØ}F
+\item[ŒŸØ]
+ƒƒbƒZ[ƒW$m$‚É‘Î‚·‚é–¼$s$‚É‘Î‚µ‚Ä
 \[
 H(m) \equiv s^e \pmod{n}
 \]
 ‚ª¬‚è—§‚Â‚Æ‚«–¼‚ğó—A‚»‚¤‚Å‚È‚¢‚Æ‚«Šü‹pi‚«‚«‚á‚­j‚µ‚Ü‚·B
-\end{itemize}
+}
 ƒnƒbƒVƒ…ŠÖ”‚ğg‚¤‚Æ‚±‚ëˆÈŠO‚ÍRSAˆÃ†‚Æ‚Ù‚Ú“¯‚¶‚Å‚·B
 ‚±‚Ì–¼‚ÍRSA‰¼’è‚Æƒ‰ƒ“ƒ_ƒ€ƒIƒ‰ƒNƒ‹ƒ‚ƒfƒ‹‚ÌŒ³‚ÅˆÀ‘S‚Å‚·B
 ƒ‰ƒ“ƒ_ƒ€ƒIƒ‰ƒNƒ‹ƒ‚ƒfƒ‹‚Æ‚¢‚¤‚Ì‚ÍƒnƒbƒVƒ…ŠÖ”‚ğo—Í‚ªŠ®‘S‚Éƒ‰ƒ“ƒ_ƒ€‚É‚È‚é—‘z‚ÌŠÖ”‚Å‚ ‚é‚Æ‚¢‚¤‰¼’è‚ğ’u‚¢‚½ƒ‚ƒfƒ‹‚Ì‚±‚Æ‚Å‚·B
@@ -260,34 +263,31 @@ $n$‚ª2048ƒrƒbƒg‚È‚çƒnƒbƒVƒ…ŠÖ”‚à2048ƒrƒbƒg•K—v‚È‚Ì‚Å‚ ‚Ü‚èŒø—¦‚ª‚æ‚¢‚Æ‚Í‚¢‚¦‚Ü‚
 
 \subsection{DSA}
 Ÿ‚ÉElGamal–¼‚Ì‰ü—ÇŒn‚Å‚ ‚èAŒ»İ•W€“I‚Ég‚í‚ê‚Ä‚¢‚éDSAiDigital Signature Algorithmj~\cite{dsa}‚Æ‚¢‚¤–¼‚ğĞ‰î‚µ‚Ü‚µ‚å‚¤B
-\begin{itemize}
-\item[] \textbf{Œ®¶¬}F
-  \begin{itemize}
-  \item[1.] ƒnƒbƒVƒ…ŠÖ”$H$‚ğŒˆ‚ß‚éB
-  \item[2.] $(p,q,g)$‚ğDHƒpƒ‰ƒ[ƒ^i\ref{dh-param}ßQÆj‚Æ‚·‚éB
-‚½‚¾‚µ$p$‚Í2048ƒrƒbƒg‚Ì‘f”‚ÅA$q$‚ÍƒnƒbƒVƒ…ŠÖ”‚Ìo—Íƒrƒbƒg’·‚Æ“¯‚¶i‚½‚Æ‚¦‚Î256ƒrƒbƒgj‘å‚«‚³‚Ì‚à‚Ì‚ğ‘I‚ÔB
+\mydescription{
+\item[Œ®¶¬]
+ƒnƒbƒVƒ…ŠÖ”$H$‚ğŒˆ‚ß‚éB
+Ÿ‚É$(p,q,g)$‚ğDHƒpƒ‰ƒ[ƒ^i\ref{dh-param}ßQÆj‚Æ‚·‚éB
+‚½‚¾‚µ$p$‚Í2048ƒrƒbƒg‚Ì‘f”‚ÅA$q$‚ÍƒnƒbƒVƒ…ŠÖ”‚Ìo—Íƒrƒbƒg’·‚Æ“¯‚¶i‚½‚Æ‚¦‚Î256ƒrƒbƒgj‘å‚«‚³‚Ì‚à‚Ì‚ğ‘I‚ÔB\\
 $g$‚Í¶¬Œ³‚Å$g^q \equiv 1 \bmod{p}$B$p-1$‚Í$q$‚ÅŠ„‚èØ‚ê‚éB
-  \item[3.] $0 < x < q$‚Æ‚È‚é$x$‚ğƒ‰ƒ“ƒ_ƒ€‚É‘I‚Ñ$y:=g^x \bmod{p}$‚Æ‚·‚éB$(g, p, q, y)$‚ªŒöŠJŒ®‚Å$x$‚ª”é–§Œ®B
-  \end{itemize}
-\item[] \textbf{ƒƒbƒZ[ƒW$m$‚É‘Î‚·‚é–¼}F
-  \begin{itemize}
-  \item[1.] $k$‚ğƒ‰ƒ“ƒ_ƒ€‚É‘I‚Ñ$r:=(g^k \bmod{p}) \bmod{q}$‚Æ‚·‚éB
-  \item[2.] $s:=(H(m)+xr)/k\bmod{q}$‚Æ‚·‚éB$(r,s)$‚ğ$m$‚É‘Î‚·‚é–¼‚Æ‚·‚éB
-  \end{itemize}
-\item[] \textbf{ƒƒbƒZ[ƒW$m$‚É‘Î‚·‚é$(r,s)$‚ÌŒŸØ}F
-  \begin{itemize}
-  \item[1.] $0 < r, s < q$‚ğŠm”F‚·‚éB”ÍˆÍŠO‚È‚çŠü‹p‚·‚éB
-  \item[2.]
-  \begin{align*}
-   & w:=s^{-1} \bmod{q},\\
-   & u_1:=H(m)w \bmod{q},\\
-   & u_2:=rw \bmod{q},\\
-   & v:= (g^{u_1} y^{u_2} \bmod{p}) \bmod{q}
-  \end{align*}
-  ‚ğ‹‚ß‚éB
-  \item[3.] $v=r$‚È‚ç–¼‚ğó—‚µA‚»‚¤‚Å‚È‚¢‚È‚çŠü‹p‚·‚éB
-  \end{itemize}
-\end{itemize}
+
+ÅŒã‚É$0 < x < q$‚Æ‚È‚é$x$‚ğƒ‰ƒ“ƒ_ƒ€‚É‘I‚Ñ$y:=g^x \bmod{p}$‚Æ‚·‚éB$(g, p, q, y)$‚ªŒöŠJŒ®‚Å$x$‚ª”é–§Œ®B
+
+\item[–¼] ƒƒbƒZ[ƒW$m$‚É‘Î‚µ‚Ä
+$k$‚ğƒ‰ƒ“ƒ_ƒ€‚É‘I‚Ñ$r:=(g^k \bmod{p}) \bmod{q}$‚Æ‚·‚éB
+\[
+s:=(H(m)+xr)/k\bmod{q}
+\]
+‚ğŒvZ‚µ$(r,s)$‚ğ$m$‚É‘Î‚·‚é–¼‚Æ‚·‚éB
+\item[ŒŸØ] –¼$(r,s)$‚É‚Â‚¢‚Ä
+Å‰‚É$0 < r, s < q$‚ğŠm”F‚·‚éB”ÍˆÍŠO‚È‚çŠü‹p‚·‚éBƒƒbƒZ[ƒW$m$‚É‘Î‚µ‚Ä
+\begin{align*}
+& w:=s^{-1} \bmod{q},\\
+& u_1:=H(m)w \bmod{q},\\
+& u_2:=rw \bmod{q},\\
+& v:= (g^{u_1} y^{u_2} \bmod{p}) \bmod{q}
+\end{align*}
+‚ğ‹‚ß‚Ä$v=r$‚È‚ç–¼‚ğó—‚µA‚»‚¤‚Å‚È‚¢‚È‚çŠü‹p‚·‚éB
+}
 $p$‚Æ$q$‚Ì“ñí—Ş‚Ìè—]‚ğg‚¢‚Ü‚·B
 ‚±‚ê‚Í$p$‚ª‘å‚«‚¢‚Ì‚Å$q$‚ÅŠ„‚Á‚Ä‚æ‚¢‚Æ‚±‚ë‚Í$q$‚ğg‚Á‚ÄŒø—¦‰»‚·‚é‚½‚ß‚Å‚·B
 ³‚µ‚¢ƒƒbƒZ[ƒW‚É‘Î‚µ‚Ä–¼‚ªó—‚³‚ê‚é‚±‚Æ‚ğŠm”F‚µ‚Ü‚µ‚å‚¤B
@@ -329,27 +329,25 @@ A‚Í$y$‚©‚ç$\Unblind(y)$‚ğ‹‚ß‚Ü‚·iƒAƒ“ƒuƒ‰ƒCƒ“ƒhˆ—jB
 \]
 ‚Æ‚È‚Á‚Ä‚¢‚é‚ÆA‚ª$m$‚ğŒöŠJ‚·‚ê‚Î’N‚à‚ª$(m,\Sign(m))$‚ÍB‚ª–¼‚µ‚½‚Æ‚¢‚¤‚±‚Æ‚ğŠm”F‚Å‚«‚Ü‚·B
 RSA–¼‚ğg‚Á‚½ƒuƒ‰ƒCƒ“ƒh–¼‚ğĞ‰î‚µ‚Ü‚µ‚å‚¤B
-\begin{itemize}
-\item[] \textbf{Œ®¶¬}F
+\mydescription{
+\item[Œ®¶¬]
 B‚ÍRSA-FDH–¼‚Ì–¼Œ®$d$‚ÆŒŸØŒ®$(n,e,H)$‚ğ—pˆÓ‚·‚éB
-\item[] \textbf{ƒuƒ‰ƒCƒ“ƒh}F
-A‚ÍƒƒbƒZ[ƒW$m$‚É‘Î‚µ‚Ä—”$r$‚ğ—p‚¢‚Ä
+\item[ƒuƒ‰ƒCƒ“ƒh]
+A‚ÍƒƒbƒZ[ƒW$m$‚É‘Î‚µ‚Ä—”$r$‚ğ—p‚¢‚Ä$x$‚ğŒvZ‚µ‚ÄB‚É“n‚·B
 \[
-x:=\Blind(m):=r^e H(m) \bmod{n}
+x:=\Blind(m):=r^e H(m) \bmod{n}.
 \]
-‚ğŒvZ‚µ$x$‚ğB‚É“n‚·B
-\item[] \textbf{–¼} :
+\item[–¼]
 B‚Í$x$‚É‘Î‚µ‚Ä–¼$y$‚ğŒvZ‚µ‚ÄA‚É•Ô‚·B
 \[
 y:=\Sign(x):=x^d \bmod{n}.
 \]
-\item[] \textbf{ƒAƒ“ƒuƒ‰ƒCƒ“ƒh}F
-A‚Í$y$‚É‘Î‚µ‚Ä
+\item[ƒAƒ“ƒuƒ‰ƒCƒ“ƒh]
+A‚Í$y$‚©‚çƒƒbƒZ[ƒW$m$‚É‘Î‚·‚éB‚Ì–¼$s$‚ğŒvZ‚·‚éB
 \[
-s:=\Unblind(y):= y/r \bmod{n}
+s:=\Unblind(y):= y/r \bmod{n}.
 \]
-‚ğŒvZ‚·‚éB$(m,s)$‚ªƒƒbƒZ[ƒW$m$‚É‘Î‚·‚éB‚Ì–¼‚Å‚ ‚éB
-\end{itemize}
+}
 –¼‚É‚È‚Á‚Ä‚¢‚é‚±‚Æ‚ÌŠm”FF
 \[
 y \equiv x^d \equiv (r^e H(m))^d = r^{ed} H(m)^d \equiv r H(m)^d \bmod{n}
@@ -405,14 +403,15 @@ A‚ªB‚É–â‚¢‡‚í‚¹‚é‚±‚Æ‚ÅA‚Í$S_A \cap S_B$‚ğ‹‚ß‚Ü‚·B
 2000”N‚Éˆ¢•”A‰ª–{‚É‚æ‚è’ñˆÄ‚³‚ê‚½•û®~\cite{Abe:2000}‚ğĞ‰î‚µ‚Ü‚µ‚å‚¤B
 ‚±‚ê‚Í—£U‘Î”–â‘è‚ğˆÀ‘S«‚Ìª‹’‚É’u‚­Schnorr–¼‚ÌŠg’£‚É‚È‚Á‚Ä‚¢‚Ü‚·B
 A‚³‚ñ‚ª–¼‚ğ‚µ‚Ä‚Ù‚µ‚¢lAB‚³‚ñ‚ª–¼Ò‚Å‚·BƒƒbƒZ[ƒW‚ğ$m$A—¼Ò‚ª‹¤—L‚·‚éƒƒbƒZ[ƒW‚ğ$m'$‚Æ‚µ‚Ü‚·B
-\begin{itemize}
-\item[] \textbf{Œ®¶¬} $(p,q,g)$‚ğDHƒpƒ‰ƒ[ƒ^i\ref{dh-param}ßQÆj‚Æ‚·‚éB
+\begin{enumerate}
+%\myitemindent
+\item $(p,q,g)$‚ğDHƒpƒ‰ƒ[ƒ^i\ref{dh-param}ßQÆj‚Æ‚·‚éB
 $p$‚Æ$q$‚Í$p-1$‚ª$q$‚Ì”{”‚Æ‚È‚é‘f”‚Å$g^q=1 \bmod{p}$‚Å‚ ‚éB
 B‚Í”é–§Œ®$x$‚ğŒˆ‚ß‚Ä$y:=g^x \bmod{p}$‚ğŒöŠJŒ®‚Æ‚·‚éB
 X‚ÉƒnƒbƒVƒ…ŠÖ”$H$‚ğŒˆ‚ß‚éB
-\item[1.] B‚Í$m'$‚ğŠm”F‚µ‚Äƒuƒ‰ƒCƒ“ƒh–¼‚·‚é‚±‚Æ‚ÉŒˆ‚ß‚éB
+\item B‚Í$m'$‚ğŠm”F‚µ‚Äƒuƒ‰ƒCƒ“ƒh–¼‚·‚é‚±‚Æ‚ÉŒˆ‚ß‚éB
 $u$, $s$, $d$‚ğƒ‰ƒ“ƒ_ƒ€‚É‘I‚ÔB$z:=H(m')$, $a:=g^u$, $b:=g^sz^d$‚ğŒvZ‚µ‚Ä$(a,b)$‚ğA‚É‘—‚éB
-\item[2.] A‚Í$z=H(m')$‚ğŠm”F‚µ$t_1$, $t_2$, $t_3$, $t_4$‚ğƒ‰ƒ“ƒ_ƒ€‚É‘I‚Ñ
+\item A‚Í$z=H(m')$‚ğŠm”F‚µ$t_1$, $t_2$, $t_3$, $t_4$‚ğƒ‰ƒ“ƒ_ƒ€‚É‘I‚Ñ
 \begin{align*}
 & \alpha:=ag^{t_1} y^{t_2},\\
 & \beta:=bg^{t_3} z^{t_4},\\
@@ -420,14 +419,14 @@ $u$, $s$, $d$‚ğƒ‰ƒ“ƒ_ƒ€‚É‘I‚ÔB$z:=H(m')$, $a:=g^u$, $b:=g^sz^d$‚ğŒvZ‚µ‚Ä$(a,b)
 & e:=\epsilon-t_2 - t_4
 \end{align*}
 ‚ğŒvZ‚µ‚Ä$e$‚ğB‚É‘—‚éB
-\item[3.] B‚Í$c:=e-d$, $r:=u-cs$‚ğŒvZ‚µA‚É$(r,c,s,d)$‚ğ‘—‚éB
-\item[4.] A‚Í$\rho:=r+t_1$, $\omega:=c+t_2$, $\sigma:=s+t_3$, $\delta:=d+t_4$‚ğŒvZ‚µ$(\rho,\omega,\sigma,\delta)$‚ğ$m$‚É‘Î‚·‚é–¼‚Æ‚·‚éB
-\item[5.] –¼‚ÌŒŸØ‚Í
+\item B‚Í$c:=e-d$, $r:=u-cs$‚ğŒvZ‚µA‚É$(r,c,s,d)$‚ğ‘—‚éB
+\item A‚Í$\rho:=r+t_1$, $\omega:=c+t_2$, $\sigma:=s+t_3$, $\delta:=d+t_4$‚ğŒvZ‚µ$(\rho,\omega,\sigma,\delta)$‚ğ$m$‚É‘Î‚·‚é–¼‚Æ‚·‚éB
+\item –¼‚ÌŒŸØ‚Í
 \[
 \omega + \delta = H(g^{\rho} y^{\omega}, g^{\sigma} z^{\delta}, z, m)
 \]
 ‚ª¬‚è—§‚Â‚©‚Ç‚¤‚©‚Å”»’è‚·‚éB
-\end{itemize}
+\end{enumerate}
 ³‚µ‚­ŒvZ‚µ‚Ä‚¢‚é‚È‚ç
 \begin{align*}
 &\omega+\delta=c+t_2 + d+t_4=e-d+t_2+d+t_4=(\epsilon-t_2-t_4)+t_2+t_4=\epsilon,\\
