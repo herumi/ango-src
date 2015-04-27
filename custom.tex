@@ -1,0 +1,47 @@
+%%%
+% jsbook.styを上書きする
+\makeatletter
+% partで改ページさせない
+\def\@endpart{\vfil\newpage
+  \if@restonecol
+    \twocolumn
+  \fi}
+% remarkのページを太文字にする
+\def\ps@boldpages{%
+  \let\@oddfoot\@empty\let\@evenfoot\@empty
+  \def\@evenhead{%
+    \if@mparswitch \hss \fi%
+    \hbox to \fullwidth{\textbf{\thepage}\hfil\leftmark}%
+    \if@mparswitch\else \hss \fi}%
+  \def\@oddhead{%
+    \hbox to \fullwidth{\rightmark\hfil\textbf{\thepage}}\hss}%
+  \let\@mkboth\@gobbletwo
+  \let\chaptermark\@gobble
+  \let\sectionmark\@gobble
+}
+% 「はじめに」と「目次」用ページ設定
+\def\ps@intropages{%
+  \let\@oddfoot\@empty
+  \let\@evenfoot\@empty
+  \def\@evenhead{%
+    \if@mparswitch \hss \fi
+    \underline{\hbox to \fullwidth{\autoxspacing
+        \textbf{\thepage}\hfil\leftmark}}%
+    \if@mparswitch\else \hss \fi}%
+  \def\@oddhead{\underline{\hbox to \fullwidth{\autoxspacing
+        {\if@twoside\leftmark \else\leftmark\fi}\hfil\textbf{\thepage}}}\hss}%
+  \let\@mkboth\markboth
+  \def\chaptermark##1{\markboth{%
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \if@omit@number\else
+          \@chapapp\thechapter\@chappos\hskip1zw
+        \fi
+      \fi
+    \fi
+    ##1}{}}%
+  \def\sectionmark##1{\markright{%
+    \ifnum \c@secnumdepth >\z@ \thesection \hskip1zw\fi
+    ##1}}}%
+\makeatother
+%%%
