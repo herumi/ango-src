@@ -177,10 +177,10 @@ f(aP,bQ, cR, dS, \dots)=f(P,Q,R,S, \dots)^{abcd \cdots}
 とします。
 すると平行四辺形の4個の座標は$(0,0)$, $(a, b)$, $(a+c, b+d)$, $(c,d)$です。
 この平行四辺形の面積$S(P,Q)$を求めます。
-\image{area.pdf}{3角形$OPQ$と平行四辺形$OPRQ$}
 まず3角形$OPQ$をぴったり囲む長方形$OSTU$を考えます。
 ここで$S=(a,0)$, $T=(a,d)$, $U=(0,d)$です。
 3角形$OPQ$の面積$S'$は、長方形$OSTU$の面積から3個の3角形$X:=\triangle OSP$, $Y:=\triangle OQU$, $Z:=\triangle PTQ$の面積を引いたものです。
+\image{area.pdf}{3角形$OPQ$と平行四辺形$OPRQ$}
 3個の3角形の面積はそれぞれ
 \[
 X\text{の面積} = \half ab, \quad Y\text{の面積} = \half cd, \quad Z\text{の面積} = \half (a-c)(d-b).
@@ -232,7 +232,6 @@ $\psi$は線形写像なので整数$a$に対して
 \psi(aP)=a\psi(P)=aQ
 \]
 が成り立ちます。
-\image{distortion.pdf}{distortion写像}
 $\psi$をdistortion写像といいます。2001年Boneh, Franklinが提案しました~\cite{BF}。
 
 $\psi$を使って任意の$P$の倍数$aP$, $bP$に対して写像$e':\gen{P} \times \gen{P} \rightarrow F_q$を
@@ -240,6 +239,7 @@ $\psi$を使って任意の$P$の倍数$aP$, $bP$に対して写像$e':\gen{P} \times \gen{P} \r
 e'(aP, bP):=e(aP, \psi(bP))
 \]
 と定義します。片方の点をdistortion写像で移してからペアリングをとるのです。
+\image{distortion.pdf}{distortion写像}
 すると$e'(P,P)=e(P,Q)\ne 1$です。
 また$\psi$の線形性と$e$の双線形性から
 \[
