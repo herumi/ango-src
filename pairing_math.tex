@@ -18,10 +18,10 @@ $a_i \ne 0$となる最小の$i$を$f$の$x=a$における位数といい
 \]
 と書きます。
 たとえば$f(x)=x^3$のとき、零点は$x=0$で$\ord{0}{x^3}=3$です。
-\image{zero.pdf}{関数の零点とその位数}
 位数はその点で関数$f$が$x$軸とどれぐらいで接しているかを表しています。
 直線$y=x$と直線$y=0$は原点$(0,0)$で交差しています。
 関数$y=x^n$は$x$軸と$(0,0)$で$n$重に接しているといいます。
+\image{zero.pdf}{関数の零点とその位数}
 $f(x)=x(x+1)(x-1)^2$だと零点は$x=0, -1, 1$の3個です。
 $x=0$での位数は
 \[
@@ -451,7 +451,7 @@ Millerのアルゴリズムも紹介されています。
 %\footnote{ペアリングの定義 : \url{http://homepage1.nifty.com/herumi/crypt/pairing-def.html}}
 ペアリングを高速に計算することは新しい暗号方式にとって非常に重要です。
 Tateペアリング~\cite{pairing-doukou}、optimal Ateペアリングなど様々な高速手法が提案されています。
-私は2014年の時点で世界最速な実装の一つを\url{https://github.com/herumi/ate-pairing/}で公開しています。
+私は2014年の時点で世界最速な実装の一つをGithubで公開しています~\footnote{\url{https://github.com/herumi/ate-pairing/}}。
 実装方法については、またの機会に紹介しましょう。
 
 \section{この章のまとめ}
