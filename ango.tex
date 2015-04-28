@@ -1,5 +1,6 @@
-%\documentclass[b5j,final,openany]{jsbook}
-\documentclass[a5j, 9pt, final]{jsbook}
+%\documentclass[a5j, 9pt, final]{jsbook}
+\documentclass[a5j, 9pt, final,openany]{jsbook}
+\include{custom}
 \usepackage[hyphens]{url}
 \usepackage[dvipdfmx]{hyperref}
 \usepackage[dvipdfmx]{pxjahyper}
@@ -24,7 +25,9 @@
 \usepackage{ascmac}
 \usepackage{braket}
 \usepackage{stmaryrd}
+\usepackage{fancyhdr}
 
+%\frontmatter
 \makeindex
 
 \include{notation}
@@ -35,13 +38,20 @@
 \begin{document}
 \maketitle
 
+\pagestyle{intropages}
 \pagenumbering{roman}
+\setcounter{page}{2}
+%\include{remark-book}
+\include{remark}
 \include{_intro}
 \setcounter{tocdepth}{2}
 \tableofcontents
-\setcounter{page}{1}
+\include{_kigou}
+\newpage
+%\mainmatter
+\pagestyle{headings}
 \pagenumbering{arabic}
-
+\setcounter{page}{1}
 \part{暗号の基礎}
 \label{part:base}
 \include{_secret}
@@ -86,6 +96,7 @@
 
 \include{_appendix}
 
+\pagestyle{intropages}
 \bibliographystyle{jalpha}
 \bibliography{ref}
 
@@ -93,4 +104,6 @@
 \phantomsection % しおりで索引にジャンプする
 \printindex
 
+% 最後空ページ
+\emptypage
 \end{document}
