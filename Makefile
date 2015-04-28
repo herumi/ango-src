@@ -1,5 +1,5 @@
 TEX = intro.tex secret.tex public.tex hash.tex elliptic.tex group.tex pairing.tex homo.tex abe.tex broadcast.tex assumption.tex field_math.tex ec_math.tex search.tex zero.tex pairing_math.tex rand.tex appendix.tex proxy.tex fe.tex
-_TEX = _intro.tex _secret.tex _public.tex _hash.tex _elliptic.tex _group.tex _pairing.tex _homo.tex _abe.tex _broadcast.tex _assumption.tex _field_math.tex _ec_math.tex _search.tex _zero.tex _pairing_math.tex _rand.tex _appendix.tex _proxy.tex _fe.tex
+_TEX = _intro.tex _secret.tex _public.tex _hash.tex _elliptic.tex _group.tex _pairing.tex _homo.tex _abe.tex _broadcast.tex _assumption.tex _field_math.tex _ec_math.tex _search.tex _zero.tex _pairing_math.tex _rand.tex _appendix.tex _proxy.tex _fe.tex _kigou.tex
 IMG = img/dh.pdf img/dh-ok.pdf img/dh-ng.pdf img/elgamal-weak.pdf \
     img/circle.pdf img/dq3.pdf img/dq3-2.pdf \
     img/elliptic.pdf img/pairing.pdf img/timecapsule.pdf \
@@ -24,12 +24,15 @@ IMG = img/dh.pdf img/dh-ok.pdf img/dh-ng.pdf img/elgamal-weak.pdf \
     pptx2pdf $?
     pdfcrop $*.pdf $*.pdf
 
-ango.pdf: ango.tex $(_TEX) $(IMG) ref.bib add_idx.py
+ango.pdf: ango.tex $(_TEX) $(IMG) ref.bib add_idx.py remark.tex custom.tex
     platex ango.tex
     jbibtex ango
     platex ango.tex
     mendex -c -g -S -s dot.ist ango.idx
     ptex2pdf -l -ot -synctex=1 ango.tex
+
+_kigou.tex: kigou.tex
+    python add_idx.py $?
 
 _intro.tex: intro.tex
     python add_idx.py $?
