@@ -107,6 +107,7 @@ wordTbl = {
 	u"拡大体":u"かくだいたい",
 	u"素体":u"そたい",
 	u"実数体":u"じっすうたい",
+	u"既約多項式":u"きやくたこうしき",
 	u"複素数体":u"ふくそすうたい",
 	u"標数":u"ひょうすう",
 	u"Euclidの互除法":u"Euclidのごじょほう",
@@ -139,6 +140,10 @@ wordTbl = {
 	u"ワンタイムパッド":u"わんたいむぱっど",
 
 	u"Lagrange補間":u"Lagrangeほかん",
+	u"Liouvilleの定理":u"Liouvilleのていり",
+	u"代数的閉包":u"だいすうてきへいほう",
+	u"代数学の基本定理":u"だいすうがくのきほんていり",
+	u"有理点":u"ゆうりてん",
 #	u"Lagrange係数":u"Lagrangeけいすう",
 #	u"Vandermonde行列":u"Vandermondeぎょうれつ",
 #	$\rho$法
