@@ -31,6 +31,13 @@ ango.pdf: ango.tex $(_TEX) $(IMG) ref.bib add_idx.py remark.tex custom.tex
     mendex -c -g -S -s dot.ist ango.idx
     ptex2pdf -l -ot -synctex=1 ango.tex
 
+book.pdf: book.tex $(_TEX) $(IMG) ref.bib add_idx.py remark-book.tex custom.tex
+    platex book.tex
+    jbibtex book
+    platex book.tex
+    mendex -c -g -S -s dot.ist book.idx
+    ptex2pdf -l -ot -synctex=0 book.tex
+
 _kigou.tex: kigou.tex
     python add_idx.py $?
 
