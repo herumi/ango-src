@@ -27,15 +27,15 @@ IMG = img/dh.pdf img/dh-ok.pdf img/dh-ng.pdf img/elgamal-weak.pdf \
 ango.pdf: ango.tex $(_TEX) $(IMG) ref.bib add_idx.py remark.tex custom.tex
     platex ango.tex
     jbibtex ango
-    platex ango.tex
     mendex -c -g -S -s dot.ist ango.idx
+    platex ango.tex
     ptex2pdf -l -ot -synctex=1 ango.tex
 
 book.pdf: book.tex $(_TEX) $(IMG) ref.bib add_idx.py remark-book.tex custom.tex
     platex book.tex
     jbibtex book
-    platex book.tex
     mendex -c -g -S -s dot.ist book.idx
+    platex book.tex
     ptex2pdf -l -ot -synctex=0 book.tex
 
 _kigou.tex: kigou.tex
