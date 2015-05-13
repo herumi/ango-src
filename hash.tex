@@ -413,10 +413,8 @@ Bは秘密鍵$x$を決めて$y:=g^x \bmod{p}$を公開鍵とする。
 $u$, $s$, $d$をランダムに選ぶ。$z:=H(m')$, $a:=g^u$, $b:=g^sz^d$を計算して$(a,b)$をAに送る。
 \item Aは$z=H(m')$を確認し$t_1$, $t_2$, $t_3$, $t_4$をランダムに選び
 \begin{align*}
-& \alpha:=ag^{t_1} y^{t_2},\\
-& \beta:=bg^{t_3} z^{t_4},\\
-& \epsilon:=H(\alpha, \beta, z, m),\\
-& e:=\epsilon-t_2 - t_4
+& \alpha:=ag^{t_1} y^{t_2}, \quad \beta:=bg^{t_3} z^{t_4},\\
+& \epsilon:=H(\alpha, \beta, z, m), \quad e:=\epsilon-t_2 - t_4
 \end{align*}
 を計算して$e$をBに送る。
 \item Bは$c:=e-d$, $r:=u-cs$を計算しAに$(r,c,s,d)$を送る。
@@ -435,7 +433,7 @@ $u$, $s$, $d$をランダムに選ぶ。$z:=H(m')$, $a:=g^u$, $b:=g^sz^d$を計算して$(a,b)
 &H(g^{\rho} y^{\omega}, g^{\sigma} z^{\delta}, z, m)=H(\alpha, \beta, z, m)=\epsilon
 \end{align*}
 となることを確認できます。
-この方式はDLP仮定のもとで安全だと証明されています。
+この方式はDLP仮定のもとで安全と証明されています。
 
 \section{この章のまとめ}
 公開鍵基盤に必要な認証について説明しました。
