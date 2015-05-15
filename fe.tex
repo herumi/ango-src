@@ -54,7 +54,7 @@ R(v, x) :=
 \]
 $n=2$のとき図\ref{fig:inner-product.pdf}を見ながら内積の意味を確認しておきましょう。
 \image{inner-product.pdf}{直交する2次元ベクトル}
-$v:=(a,b)$, $x:=(c,d)$とします。
+$x:=(a,b)$, $y:=(c,d)$とします。
 点$(a, b)$を、原点を中心に90度半時計周りに回すと$(-b,a)$になります。
 $(a,b)$と$(c,d)$が直角なら$(-b,a)$と$(c,d)$は並行です。よって
 \[
@@ -249,7 +249,7 @@ $g_T:=e(P,P)^r$とします。
 行列$\bolB$と$g_T$がシステムの公開鍵で$\bolB^*$がシステムの秘密鍵です。
 
 パラメータ$v \in {\FF_p}^n$に対する鍵生成を次のようにします。
-$\sigma$, $\eta$を$\FF_q$, $(\FF_q)^n$からランダムに選び、秘密鍵$k^*$を
+$\sigma$, $\eta$を$\FF_q$, ${\FF_q}^n$からランダムに選び、秘密鍵$k^*$を
 \[
 k^*:=(\underbrace{1}_{1}, \underbrace{\sigma v}_{n}, \underbrace{0}_{2n}, \underbrace{\eta}_{n}, \underbrace{0}_{1})_{\bolB^*} \text{ に対応する$V$の元}
 \]
