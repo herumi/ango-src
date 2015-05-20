@@ -147,6 +147,7 @@ wordTbl = {
 	u"有理点":u"ゆうりてん",
 	u"等分点":u"とうぶんてん",
 	u"ねじれ点":u"ねじれてん",
+	u"局所座標":u"きょくしょざひょう",
 #	u"Lagrange係数":u"Lagrangeけいすう",
 #	u"Vandermonde行列":u"Vandermondeぎょうれつ",
 #	$\rho$法
