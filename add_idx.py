@@ -38,6 +38,8 @@ wordTbl = {
 	u"CBDH–â‘è":u"CBDH‚à‚ñ‚¾‚¢",
 	u"DBDH–â‘è":u"DBDH‚à‚ñ‚¾‚¢",
 	u"IND-CCA2":u"IND-CCA2",
+	u"MT":u"MT",
+	u"Mersenne Twister":u"Mersenne Twister",
 
 	u"FE":u"FE",
 	u"SHE":u"SHE",
