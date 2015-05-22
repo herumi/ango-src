@@ -150,6 +150,9 @@ wordTbl = {
 	u"等分点":u"とうぶんてん",
 	u"ねじれ点":u"ねじれてん",
 	u"局所座標":u"きょくしょざひょう",
+	u"二項演算":u"にこうえんざん",
+	u"二項定理":u"にこうていり",
+	u"Pascalの三角形":u"Pascalのさんかくけい",
 #	u"Lagrange係数":u"Lagrangeけいすう",
 #	u"Vandermonde行列":u"Vandermondeぎょうれつ",
 #	$\rho$法
