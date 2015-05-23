@@ -171,7 +171,7 @@ $x < p$ですので逆元を求める計算は$O(\log(p))$となります。
 
 $n=0$のときは両辺ともに1で成立します（$x^0=0$とします）。
 
-$n=k$のとき成り立つとすると$n=k+1$のとき、
+$n=k$のとき成立するとすると$n=k+1$のとき、
 \begin{align*}
 (x+y)^{n+1} &= (x+y)(x+y)^n=(x+y)\left(\sum_{k=0}^n \combi{n}{k} \, x^k y^{n-k}\right)\\
  &= \left(\sum_{k=0}^n \combi{n}{k} \, x^{k+1} y^{n-k}\right) + \left(\sum_{k=0}^n \combi{n}{k} \, x^k y^{n+1-k}\right)\\
