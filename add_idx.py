@@ -48,6 +48,8 @@ wordTbl = {
 	u"対称ペアリング":u"たいしょうぺありんぐ",
 	u"非対称ペアリング":u"ひたいしょうぺありんぐ",
 	u"双線形写像":u"そうせんけいしゃぞう",
+	u"前方秘匿性":u"ぜんぽうひとくせい",
+	u"PFS":u"PFS",
 
 	u"DLP":u"DLP",
 	u"DSA":u"DSA",
@@ -78,7 +80,7 @@ wordTbl = {
 	u"暗号理論的擬似乱数":u"あんごうりろんてきぎじらんすう",
 	u"トーラス":u"とーらす",
 	u"可換群":u"かかんぐん",
-	u"結合即":u"けつごうそく",
+	u"結合法則":u"けつごうそく",
 	u"ランダムウォーク関数":u"らんだむうぉーくかんすう",
 	u"巡回群":u"じゅんかいぐん",
 	u"生成元":u"せいせいげん",
@@ -168,7 +170,7 @@ def addIndex(inFile):
 
 	for (word, furigana) in wordTbl.items():
 		r = u'%s\index{%s@%s}' % (word, furigana, word)
-		s = re.sub('([^a-zA-Z])' + word, '\\1' + r, s)
+		s = re.sub('([^a-zA-Z{])' + word, '\\1' + r, s)
 	s = s.replace(u'。', u'．')
 	s = s.replace(u'、', u'，')
 
