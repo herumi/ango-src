@@ -104,4 +104,4 @@ _appendix.tex: appendix.tex
     python add_idx.py $?
 
 clean:
-    rm -rf _*.tex *.blg *.aux *.idx *.ilg *.ind *.log *.toc *.dvi *.out *.pdf *.bbl
+    rm -rf _*.tex *.blg *.aux *.idx *.ilg *.ind *.log *.toc *.dvi *.out ango.pdf book.pdf book0.pdf *.bbl
