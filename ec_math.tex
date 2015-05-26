@@ -438,21 +438,8 @@ $L_{(2a,2b)}$も$L_{(3a,3b)}$も同じ直線を表します。
 \]
 となります。
 $(a:b)$を射影座標とか\ruby{斉次座標}{せい|じ|ざ|ひょう}といいます。
-$\PP^1(\RR)$の元のうち、傾きが有限の直線の集合を$U_1:=\Set{(a:b)|b \ne 0}$とします。
-$\PP^1(\RR)=U_1 \cup \Set{(1:0)}$です。
-\[
-\begin{array}{cccc}
-\varphi_1:& \RR & \longrightarrow & U_1 \\
-&\rotatebox{90}{$\in$} &             & \rotatebox{90}{$\in$} \\
-&t                     & \longmapsto & (t:1)
-\end{array}
-\]
-は1対1の対応をしています。
-$\varphi_1$を使うと無限遠点以外の値を通常の$\RR$のままで扱えます。
-
-また$U_0:=\Set{(a:b)|a \ne 0}$とすると
-$\PP^1(\RR)=U_0 \cup \Set{(0:1)}$となります。
-このときは
+$\PP^1(\RR)$の元のうち、傾きが有限の直線の集合を$U_0:=\Set{(a:b)|a \ne 0}$とします。
+$\PP^1(\RR)=U_0 \cup \Set{(0:1)}$です。
 \[
 \begin{array}{cccc}
 \varphi_0:& \RR & \longrightarrow & U_0 \\
@@ -460,7 +447,20 @@ $\PP^1(\RR)=U_0 \cup \Set{(0:1)}$となります。
 &t                     & \longmapsto & (1:t)
 \end{array}
 \]
-が1対1の対応をしていて$t=0$は$(1:0)$に対応するので無限遠点の付近を扱えます。
+は1対1の対応をしています。
+$\varphi_1$を使うと無限遠点以外の値を通常の$\RR$のままで扱えます。
+
+また$U_1:=\Set{(a:b)|b \ne 0}$とすると
+$\PP^1(\RR)=U_1 \cup \Set{(1:0)}$となります。
+このときは
+\[
+\begin{array}{cccc}
+\varphi_1:& \RR & \longrightarrow & U_1 \\
+&\rotatebox{90}{$\in$} &             & \rotatebox{90}{$\in$} \\
+&t                     & \longmapsto & (t:1)
+\end{array}
+\]
+が1対1の対応をしていて$t=0$は$(0:1)$に対応するので無限遠点の付近を扱えます。
 
 この考え方を2次元空間に適用してみましょう。
 $k$を体として、2次元射影空間を
