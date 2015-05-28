@@ -163,9 +163,11 @@ E:=\Set{(x,y) \in \overline{k}^2|y^2=x^3+ax+b}\cup\Set{O}
 体$h \subseteq \overline{k}$を一つ決めます。
 点$P=(x,y)\in E$について$x$, $y \in h$のとき点$P$を$h$有理点、その集合を$E(h):=\Set{(x,y) \in h^2|y^2=x^3+ax+b}\cup\Set{O}$と書きます。
 
-グラフを書くときによく使われる2次元平面$(x,y)$のことをアフィン座標といいます。
-この章の後半で描かれる楕円曲線のグラフは正確には$E(\RR)$を考えています。
+今までトーラスなどのイメージしやすい複素数体上で考えていましたが、これからはコンピュータで計算しやすい有限体を念頭に置きます。
+厳密には区別すべきところもあるのですが概ね同じように話を進められるため詳細には触れません。
+たとえば、この章の後半で描かれる楕円曲線のグラフは$E(\RR)$を考えています。
 
+2次元平面$(x,y)$のことをアフィン座標といいます。
 アフィン座標では無限遠点を表現できません。
 そのためアフィン座標を拡張した射影座標というものを導入します。
 射影座標と無限遠点の正確な意味は\ref{projective}節で説明します。
@@ -438,29 +440,31 @@ $L_{(2a,2b)}$も$L_{(3a,3b)}$も同じ直線を表します。
 \]
 となります。
 $(a:b)$を射影座標とか\ruby{斉次座標}{せい|じ|ざ|ひょう}といいます。
-$\PP^1(\RR)$の元のうち、傾きが有限の直線の集合を$U_0:=\Set{(a:b)|a \ne 0}$とします。
+$a\ne 0$なら$(a:b)=(1:b/a)$。$a=0$なら$b \ne 0$で$(0:b)=(0:1)$です。
+$\PP^1(\RR)$の元のうち、傾きが有限の直線の集合を$U_0:=\Set{(a:b)|a \ne 0}=\Set{(1:t)|t \in \RR}$とします。
 $\PP^1(\RR)=U_0 \cup \Set{(0:1)}$です。
 \[
 \begin{array}{cccc}
-\varphi_0:& \RR & \longrightarrow & U_0 \\
+\varphi_0:& U_0 & \longrightarrow & \RR \\
 &\rotatebox{90}{$\in$} &             & \rotatebox{90}{$\in$} \\
-&t                     & \longmapsto & (1:t)
+&(1:t)                 & \longmapsto & t
 \end{array}
 \]
-は1対1の対応をしています。
-$\varphi_1$を使うと無限遠点以外の値を通常の$\RR$のままで扱えます。
+は1対1の対応をします。
+$\varphi_0$を通すと無限遠点以外の元は通常の$\RR$の値とみなせます。
+$\varphi_0:U_0 \rightarrow \RR$を$\PP^1(\RR)$の局所座標系、$t$を$(1:t) \in U_0$の局所座標といいます。
 
-また$U_1:=\Set{(a:b)|b \ne 0}$とすると
-$\PP^1(\RR)=U_1 \cup \Set{(1:0)}$となります。
-このときは
+同様に$U_1:=\Set{(a:b)|b \ne 0}$とすると
+$\PP^1(\RR)=U_1 \cup \Set{(1:0)}$となり、
 \[
 \begin{array}{cccc}
-\varphi_1:& \RR & \longrightarrow & U_1 \\
+\varphi_1:& U_1 & \longrightarrow & \RR \\
 &\rotatebox{90}{$\in$} &             & \rotatebox{90}{$\in$} \\
-&t                     & \longmapsto & (t:1)
+&(t:1)                 & \longmapsto & t
 \end{array}
 \]
-が1対1の対応をしていて$t=0$は$(0:1)$に対応するので無限遠点の付近を扱えます。
+が1対1の対応をします。$t=0$は$(0:1)$に対応するので無限遠点の付近を扱えます。
+ただし逆に原点$(1:0)$は扱えません。
 
 この考え方を2次元空間に適用してみましょう。
 $k$を体として、2次元射影空間を
@@ -469,20 +473,20 @@ $k$を体として、2次元射影空間を
 \]
 と定義します。
 ここで$(X:Y:Z):=\Set{(\alpha X,\alpha Y,\alpha Z)|\alpha  \in k \setminus \Set{0}}$です。
-$Z \ne 0$となる$\PP^2(k)$の部分集合$U_2=\Set{(X:Y:Z)|Z \ne 0}$を考えます。
-$k^2$の元$(x,y)$に対して$\varphi_2(x,y):=(x:y:1) \in U_2$とするとこれは$k^2$と$U_2$の1対1の対応を与えます。
+$Z \ne 0$となる$\PP^2(k)$の部分集合$U_2=\Set{(X:Y:Z)|Z \ne 0}\subset \PP^2(k)$を考えます。
+$(X:Y:Z) \in U_2$に対して$(X/Z,Y/Z) \in k^2$を対応させるとこれは$U_2$と$k^2$の1対1の対応を与えます。
 \[
 \begin{array}{ccccc}
-\varphi_2:& k^2 & \longrightarrow & U_2 & \subset \PP^2(k)\\
-&\rotatebox{90}{$\in$} &             & \rotatebox{90}{$\in$}& \\
-&(x,y)     & \longmapsto & (x:y:1)&\\
-\varphi_2^{-1}:&(X/Z,Y/Z) & \longmapsfrom & (X:Y:Z).
+\varphi_2: & U_2 & \longrightarrow & k^2 \\
+&\rotatebox{90}{$\in$} &             & \rotatebox{90}{$\in$} \\
+&(X:Y:Z)     & \longmapsto & (X/Z,Y/Z) \\
+\varphi_2^{-1}:&(x:y:1) & \longmapsfrom & (x,y).
 \end{array}
 \]
-逆写像は$\varphi_2^{-1}(X:Y:Z)=(X/Z,Y/Z)$です。
+逆写像は$\varphi_2^{-1}(x,y)=(x:y:1)$です。
 
 楕円曲線の定義方程式$y^2=x^3+ax+b$を$\PP^2(k)$の中で考えると、
-上記$\varphi_2^{-1}$により$(Y/Z)^2=(X/Z)^3+a(X/Z)+b$,
+上記$\varphi_2$により$(Y/Z)^2=(X/Z)^3+a(X/Z)+b$,
 つまり
 \[
 Y^2Z = X^3 + aXZ^2 + bZ^3
