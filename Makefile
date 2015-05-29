@@ -37,7 +37,7 @@ book.pdf: book.tex $(_TEX) $(IMG) ref.bib add_idx.py remark-book.tex custom.tex
     mendex -c -g -S -s dot.ist book.idx
     platex book.tex
     ptex2pdf -l -ot -synctex=0 book.tex
-    rename book.pdf book0.pdf
+    copy book.pdf book0.pdf
     qpdf book0.pdf --pages book0.pdf img2\okuduke_a5.pdf -- book.pdf
 
 _kigou.tex: kigou.tex
