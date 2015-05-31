@@ -103,7 +103,7 @@ $b=1$‚ð‘—‚Á‚½‚Æ‚«‚Í$g^r$‚Æ$r+x$‚ð‚à‚ç‚¢‚Ü‚·‚ª$r$‚ª‚í‚©‚ç‚È‚¢‚Ì‚Å$x$‚à‚í‚©‚è‚Ü‚¹‚
 ‘Oß‚Ì‚æ‚¤‚ÉŒŸØ‘¤‚ª”[“¾‚Å‚«‚é‚Ü‚Å‰½“x‚à‚â‚è‚Æ‚è‚ª•K—v‚ÈƒvƒƒgƒRƒ‹‚É”ä‚×‚Ä‚¸‚Á‚ÆŒø—¦“I‚Å‚·B
 
 lifted-ElGamalˆÃ†‚Í$x$‚ð”é–§Œ®A$g$, $h$‚Æ$y:=g^x$‚ðŒöŠJŒ®‚Æ‚µ‚Ü‚µ‚½B
-•½•¶$m$‚É‘Î‚µ‚Ä—”$r$‚ð—p‚¢‚Ä
+•½•¶$m$‚É‘Î‚µ‚Ä—”$r$‚ð‘I‚ñ‚Å
 \[
 \Enc(m)=(c_1,c_2)=(g^r,h^m y^r)
 \]
@@ -111,7 +111,7 @@ lifted-ElGamalˆÃ†‚Í$x$‚ð”é–§Œ®A$g$, $h$‚Æ$y:=g^x$‚ðŒöŠJŒ®‚Æ‚µ‚Ü‚µ‚½B
 $H$‚ðƒnƒbƒVƒ…ŠÖ”‚Æ‚µ‚Ü‚·B
 \mydescription{
 \item[$m=0$‚Ì‚Æ‚«]
-$r_0$, $t_1$, $s_1$‚ðƒ‰ƒ“ƒ_ƒ€‚É‘I‚ÑA
+®”$r_0$, $t_1$, $s_1$‚ðƒ‰ƒ“ƒ_ƒ€‚É‘I‚ÑA
 \[
 R_{0,1}:=g^{r_0}, \quad R_{0,2}:=y^{r_0}, \quad R_{1,1}:=g^{s_1}/c_1^{t_1}, \quad R_{1,2}:=y^{s_1}/(c_2/h)^{t_1}
 \]
@@ -122,7 +122,7 @@ t:=H(R_{0,1}, R_{0,2}, R_{1,1}, R_{1,2}, c_1, c_2, h, g, y)
 ‚Æ‚µ‚Ä
 $t_0:=t-t_1$, $s_0:=r_0+t_0 r$‚Æ‚·‚éB
 \item[$m=1$‚Ì‚Æ‚«]
-$r_1$, $t_0$, $s_0$‚ðƒ‰ƒ“ƒ_ƒ€‚É‘I‚ÑA
+®”$r_1$, $t_0$, $s_0$‚ðƒ‰ƒ“ƒ_ƒ€‚É‘I‚ÑA
 \[
 R_{0,1}:=g^{s_0}/c_1^{t_0}, \quad R_{0,2}:=y^{s_0}/c_2^{t_0}, \quad R_{1,1}:=g^{r_1}, \quad R_{1,2}:=y^{r_1}
 \]
@@ -202,11 +202,11 @@ A‚³‚ñ‚Ì“Š•[$m$‚ðˆÃ†‰»$\Enc(m)$‚µ‚Ä‚àA‚Ç‚±‚©‚Ìƒ^ƒCƒ~ƒ“ƒO‚Å•œ†‚µ‚È‚¯‚ê‚Î‚È‚è‚Ü‚
 \section{ƒVƒƒƒbƒtƒ‹}
 ˆÃ†•¶‚ð‚©‚«¬‚º‚éiƒVƒƒƒbƒtƒ‹‚·‚éj‚Æ‚«‚ÉŽg‚í‚ê‚éÄˆÃ†‰»‚Æ‚¢‚¤•û–@‚ðÐ‰î‚µ‚Ü‚·B
 ElGamalˆÃ†‚É‚Í‚¿‚å‚Á‚Æ–Ê”’‚¢«Ž¿‚ª‚ ‚è‚Ü‚·B
-ŒöŠJŒ®$(g,y)$‚Æ—”$r$‚ðŽg‚Á‚Ä•½•¶$m$‚ðˆÃ†‰»‚µ‚Ü‚·B
+ŒöŠJŒ®$(g,y)$‚Æ—”$r$‚ð‘I‚ñ‚Å•½•¶$m$‚ðˆÃ†‰»‚µ‚Ü‚·B
 \[
 \Enc(m):=(c_1,c_2)=(g^r,my^r).
 \]
-‚±‚ÌˆÃ†•¶‚ðŽó‚¯‚½l‚ªV‚½‚É—”$r'$‚ðŽg‚Á‚Ä$c_1$‚Æ$c_2$‚©‚ç
+‚±‚ÌˆÃ†•¶‚ðŽó‚¯‚½l‚ªV‚½‚É—”$r'$‚ð‘I‚ñ‚Å$c_1$‚Æ$c_2$‚©‚ç
 \[
 (c'_1,c'_2):=(g^{r'}c_1,y^{r'}c_2)
 \]
@@ -214,7 +214,7 @@ ElGamalˆÃ†‚É‚Í‚¿‚å‚Á‚Æ–Ê”’‚¢«Ž¿‚ª‚ ‚è‚Ü‚·B
 \[
 (c'_1,c'_2)=(g^{r+r'},my^{r+r'})
 \]
-‚Æ‚È‚è—”$r+r'$‚ðŽg‚Á‚Ä$m$‚ðˆÃ†‰»‚µ‚½‚Ì‚Æ“¯‚¶‚Å‚·B
+‚Æ‚È‚èA—”$r+r'$‚ð‘I‚ñ‚Å$m$‚ðˆÃ†‰»‚µ‚½‚Ì‚Æ“¯‚¶‚Å‚·B
 Œ³‚Ì•½•¶‚ð’m‚ç‚È‚­‚Ä‚à‘¼l‚ªˆÃ†‰»‚µ‚½‚à‚Ì‚ðˆÃ†‰»‚µ’¼‚·‚±‚Æ‚ª‚Å‚«‚é‚Ì‚Å‚·B
 ‚ ‚é‚¢‚ÍElGamalˆÃ†‚Ìæ–@€“¯Œ^«‚ð—p‚¢‚ÄˆÃ†•¶$\Enc(m)$‚É•½•¶1‚ÌˆÃ†•¶$\Enc(1)=(g^{r'},y^{r'})$‚ðŠ|‚¯‚½l‚¦‚é‚±‚Æ‚à‚Å‚«‚Ü‚·B
 ‚±‚ê‚ðElGamalÄˆÃ†‰»‚Æ‚¢‚¢‚Ü‚·BÄˆÃ†‰»‚·‚é‚ÆŒ³‚ÌˆÃ†•¶‚ª‚È‚ñ‚¾‚Á‚½‚©‚í‚©‚ç‚È‚­‚È‚è‚Ü‚·B
