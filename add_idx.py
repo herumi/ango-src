@@ -131,7 +131,6 @@ wordTbl = {
 	u"射影座標":u"しゃえいざひょう",
 	u"アフィン":u"あふぃん",
 	u"斉次多項式":u"せいじたこうしき",
-	u"DPVS":u"DPVS",
 	u"attribute-hiding":u"attribute-hiding",
 	u"payload-hiding":u"payload-hiding",
 	u"private-index":u"private-index",
