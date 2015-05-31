@@ -163,6 +163,7 @@ wordTbl = {
 	u"ŽüŠúŠÖ”":u"‚µ‚ã‚¤‚«‚©‚ñ‚·‚¤",
 	u"”»•ÊŽ®":u"‚Í‚ñ‚×‚Â‚µ‚«",
 	u"“¯Œ^ŽÊ‘œ":u"‚Ç‚¤‚¯‚¢‚µ‚á‚¼‚¤",
+	u"‰Á–@’è—":u"‚©‚Ù‚¤‚Ä‚¢‚è",
 	u"ÄŽŸÀ•W":u"‚¹‚¢‚¶‚´‚Ð‚å‚¤",
 	u"Edwards‹Èü":u"Edwards‚«‚å‚­‚¹‚ñ",
 	u"DVPS":u"DVPS",
