@@ -5,13 +5,15 @@
 $\ZZ$ & 整数全体の集合（整数環）$\Set{0, \pm 1, \pm 2, \dots}$。\\
 $\RR$ & 実数全体の集合（実数体）。\\
 $\CC$ & 複素数全体の集合（複素数体）。\\
+$a:=b$ & $b$で$a$を定義する。\\
 $|S|$ & 集合$S$に対してその元（要素）の個数。\\
+$A \setminus B$ & 集合$A$、$B$に対して$A$であって$B$でないもの。\\
+                & $A \setminus B := \Set{x|x \in A \texttt{ かつ } x \notin B}$\\
 $\sum_{i=a}^b x_i$ & $\Set{x_a, x_{a+1}, \dots, x_b}$の和。\\
 $\prod_{i=a}^b x_i$ & $\Set{x_a, x_{a+1}, \dots, x_b}$の積。\\
 $a\oplus b$ & $a$と$b$の排他的論理和。\\
 $O(f(n))$ & ランダウの$O$記法。\\
           & $f(n)$が$O(g(n))$なのは$n \to \infty$で$|f(n)/g(n)|<c$のとき。\\
-$a:=b$ & $b$で$a$を定義する。\\
 $a \equiv b \bmod{m}$ & $a-b$が$m$で割り切れる。\\
 $a \pmod{m}$ & 整数$q$, $r$に対して$a=qm+r$（$0 \le r < m$）となる$r$。\\
 $\ZZ/m \ZZ$ & 整数を$m$で割った余りの集合（剰余環）。\\
@@ -23,15 +25,18 @@ $a||b$ & 2個のデータ$a$と$b$を連結したもの。\\
 $a \eqq b$ & $a$と$b$が等しいかを確認する。\\
 $\gen{g}$ & $g$で生成される巡回群$\Set{g^0, g^1, \dots}$。\\
 $a \cdot b$ & 2個のベクトル$a=(a_1,\dots,a_n)$, $b=(b_1,\dots,b_n)$の内積。\\
-            & $a \cdot b = \sum_{i=1}^n a_i b_i$。\\
-$R[x]$ & 変数$x$についての$R$係数多項式全体。\\
-                & $R[x]=\Set{\sum_{i=0}^n r_i x^i|r_i \in R, n = 0, 1, \dots}$。\\
+            & $a \cdot b := \sum_{i=1}^n a_i b_i$。\\
 \end{tabular}
 \end{table}
 
 \begin{table}[H]
 \begin{tabular}{ll}
 文末の$\Box$ & 証明終わり。\\
+$\trans{x}$ & ベクトル、または行列$x$の転置。行と列を入れ換えたもの。\\
+$\delta_{ij}$ & $i=j$のとき1で、それ以外は0。\\
+$\delta_{ijk}$ & $i=j=k$のとき1で、それ以外は0。\\
+$R[x]$ & 変数$x$についての$R$係数多項式全体。\\
+                & $R[x]=\Set{\sum_{i=0}^n r_i x^i|r_i \in R, n = 0, 1, \dots}$。\\
 $R[x\textrm{]}/(f(x))$ & $R$係数多項式を$f(x)$で割った余りの多項式全体。\\
 $\gcd(a,b)$ & $a$と$b$の最大公約数。\\
 $\combi{n}{k}$ & $n$個から$k$個取り出す組み合わせの数。\\

@@ -133,16 +133,16 @@ $x_\bolB:=xB^{-1}:=(x'_1, \dots, x'_n)$‚Í$\Set{b_i}$‚ÉŠÖ‚·‚é$x$‚Ì•\Œ»ƒxƒNƒgƒ‹‚Å‚
 \[
 x=xB^{-1} B = x_\bolB B=\sum_{i=1}^n x'_i b_i.
 \]
-“¯—l‚É$C:=(B^T)^{-1}=(c_{ij})$i$B^T$‚Å$B$‚Ì“]’u‚ğ•\‚·j‚Æ‚µ‚ÄA
+“¯—l‚É$C:=(\trans{B})^{-1}=(c_{ij})$i$\trans{B}$‚Å$B$‚Ì“]’u‚ğ•\‚·j‚Æ‚µ‚ÄA
 \[
 b^*_i:=(c_{i1}, \dots, c_{in})
 \]
 ‚Æ‚·‚é‚Æ$\bolB^*:=\Set{b^*_i}$‚à$V$‚ÌŠî’ê‚Æ‚È‚è
-$y_{\bolB^*}:=yB^T$‚Í$\Set{b^*_i}$‚ÉŠÖ‚·‚é$y$‚Ì•\Œ»ƒxƒNƒgƒ‹‚Å‚·B
+$y_{\bolB^*}:=y \trans{B}$‚Í$\Set{b^*_i}$‚ÉŠÖ‚·‚é$y$‚Ì•\Œ»ƒxƒNƒgƒ‹‚Å‚·B
 
 $x$‚Æ$y$‚Ì“àÏ‚ğl‚¦‚é‚Æ
 \[
-x \cdot y = x y^T=(xB^{-1}) (B  y^T)=(xB^{-1})(y B^T)^T = x_\bolB \cdot y_{\bolB^*}.
+x \cdot y = x \trans{y}=(xB^{-1}) (B \trans{y})=(xB^{-1})\trans{(y \trans{B}} = x_\bolB \cdot y_{\bolB^*}.
 \]
 ‚±‚ê‚Í$x$‚Æ$y$‚Ì“àÏ‚Í$x$‚Ì$\bolB$‚ÉŠÖ‚·‚é•\Œ»ƒxƒNƒgƒ‹$x_\bolB$‚Æ$y$‚Ì$\bolB^*$‚ÉŠÖ‚·‚é•\Œ»ƒxƒNƒgƒ‹$y_{\bolB^*}$‚Ì“àÏ‚É“™‚µ‚¢‚±‚Æ‚ğˆÓ–¡‚µ‚Ä‚¢‚Ü‚·B
 
@@ -156,7 +156,7 @@ x=(xB^{-1})B=(-7, 5)\vvec{b_1}{b_2}=-7b_1 + 5b_2.
 \]
 “¯—l‚É$b_1^*:=(5, -3)$, $b_2^*:=(-3,2)$‚Æ‚È‚è$y$‚ğ$b_1^*$, $b_2^*$‚ÌüŒ`˜a‚Å•\‚·‚Æ
 \[
-y=(yB^T)((B^T)^{-1})=(13, 21)\vvec{b^*_1}{b^*_2}=13b^*_1+21b^*_2.
+y=(y \trans{B})((\trans{B})^{-1})=(13, 21)\vvec{b^*_1}{b^*_2}=13b^*_1+21b^*_2.
 \]
 “àÏ‚Í
 \[
@@ -210,7 +210,7 @@ $(p, V, G_T, \bolA, e)$‚Ì‘g‚ğDPVS‚Æ‚¢‚¢‚Ü‚·B
 b_i:=(b_{i1}P, \dots, b_{in}P) \in V
 \]
 ‚Æ‚·‚é‚Æ$\bolB:=\Set{b_i}$‚Í$V$‚ÌŠî’ê‚Å‚·B
-$C:=(B^T)^{-1}=(c_{ij})$‚Æ‚µ‚ÄA
+$C:=(\trans{B})^{-1}=(c_{ij})$‚Æ‚µ‚ÄA
 \[
 b^*_i:=(c_{i1}P, \dots, c_{in}P) \in V
 \]
@@ -219,9 +219,9 @@ $b_i$‚Æ$b^*_j$‚É‚Â‚¢‚ÄƒyƒAƒŠƒ“ƒO‚ğ‚Æ‚é‚ÆA
 \[
 e(b_i,b^*_j)=\prod_{k=1}^n e(b_{ik}P, c_{jk}P)=e(P,P)^{\sum_{k=1}^n b_{ik} c_{jk}}.
 \]
-w”•”•ª‚ğŒ©‚é‚ÆA$C=(B^T)^{-1}$‚æ‚è
+w”•”•ª‚ğŒ©‚é‚ÆA$C=(\trans{B})^{-1}$‚æ‚è
 \[
-\sum_{k=1}^n b_{ik} c_{jk}=(BC^T)_{ij}=(B B^{^1})_{ij}=(I_n)_{ij}=
+\sum_{k=1}^n b_{ik} c_{jk}=(B \trans{C})_{ij}=(B B^{^1})_{ij}=(I_n)_{ij}=
 \begin{cases}
 1 & \text{ if } i = j,\\
 0 & \text{ if } i \neq j.
@@ -242,7 +242,7 @@ e(x, y)=e(P,P)^{x_\bolA \cdot y_\bolA}=e(P,P)^{x_\bolB \cdot y_{\bolB^*}}
 DPVS‚ğ—p‚¢‚Ä\¬‚µ‚½attribute-hiding‚È“àÏˆÃ†‚ğĞ‰î‚µ‚Ü‚·~\cite{OT2012}B
 \mydescription{
 \item[ƒZƒbƒgƒAƒbƒv] ©‘R”$n$‚Æ$4n+2$ŸŒ³‚Ìs—ñ$B$‚ğŒˆ‚ß‚éB
-—”$r \in \FF_p$‚ğ‚Æ‚èA$C:=r(B^T)^{-1}$‚É‘Î‚µ‚Ä$\bolB^*$‚ğì‚éB
+—”$r \in \FF_p$‚ğ‚Æ‚èA$C:=r(\trans{B})^{-1}$‚É‘Î‚µ‚Ä$\bolB^*$‚ğì‚éB
 $C$‚Í$r$”{‚³‚ê‚Ä‚¢‚Ü‚·‚ªA’¼Œğ«‚È‚Ç‚Ì«¿‚Í•Ï‚í‚è‚Ü‚¹‚ñB
 $g_T:=e(P,P)^r$‚Æ‚·‚éB
 s—ñ$\bolB$‚Æ$g_T$‚ªƒVƒXƒeƒ€‚ÌŒöŠJŒ®‚Å$\bolB^*$‚ªƒVƒXƒeƒ€‚Ì”é–§Œ®‚Å‚ ‚éB
