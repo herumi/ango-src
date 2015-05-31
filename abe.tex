@@ -196,7 +196,7 @@ $\Enc(m,\omega)$を復号できてはなりません。
 以下順に詳しく見ていきます。
 
 \subsection{セットアップ}
-楕円曲線$E$と巡回群$G$とペアリング$e:E \times E \rightarrow G$を用意します。
+楕円曲線$E$と位数$p$の巡回群$G$とペアリング$e:E \times E \rightarrow G$を用意します。
 $P$, $Q \in E$と$y \in \FF_p$をとり、$R:=yP$とします。
 属性を「人事部」や「部長」などの文字列とし、属性の集合から$E$へのハッシュ関数を$H$とします。
 $y$が秘密鍵で$P$, $Q$, $R$が公開鍵です。
@@ -212,7 +212,7 @@ K_{\omega_u}:=\Set{P_i, D_i}_{\Set{i=1, \dots, |\omega_u|}}
 \subsection{暗号化}
 属性集合$\omega$を選び、平文$m \in G$を暗号化します。
 $\omega$の中のどれか$k$個の属性を持っている人だけが復号できます。
-整数$s$をランダムに選び
+$s \in \FF_p$をランダムに選び
 \[
 \Enc(m,\omega):=(\omega, \, t:=m \cdot e(R, Q)^s, \, T:=sP, E_i:=sH(a_i)_{\set{i=1, \dots, |\omega|}} )
 \]
