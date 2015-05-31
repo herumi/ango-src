@@ -179,6 +179,8 @@ wordTbl = {
 	u"真性特異点":u"しんせいとくいてん",
 	u"一方向性":u"いちほうこうせい",
 	u"ルート証明書":u"るーとしょうめいしょ",
+	u"iO":u"iO",
+	u"識別不能難読化":u"しきべつふのうなんどくか",
 #	u"極":u"きょく",
 #	u"Lagrange係数":u"Lagrangeけいすう",
 #	u"Vandermonde行列":u"Vandermondeぎょうれつ",
