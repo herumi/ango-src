@@ -126,7 +126,7 @@ DLPの場合、$h=g^a$とすると$a$は$g$を底とする$h$の対数とみなせます。
 DLPを解くのに必要な計算量が大きすぎて現実的な時間で解けないのです。
 \begin{itemize}
 \item[1.] $p$は1024ビット以上の素数で、$p-1$の約数の中に$p$に近いサイズの素数$q$がある。
-\item[2.] $g$は$i=1, \dots, q-1$に対して$g^i \not \equiv 1 \bmod{p}$となる値（このような$g$を生成元といいます）。
+\item[2.] $g$は$i=1, \dots, q-1$に対して$g^i \not \equiv 1 \bmod{p}$となる値（このような$g$を\ruby{生成元}{せい|せい|げん}といいます）。
 \end{itemize}
 2より大きい素数$p$は奇数なので、条件1で一番よいのは$q:=(p-1)/2$が素数となるときです。
 条件2の生成元$g$は2や5が使われることが多いです~\cite{RFC3526}。
@@ -634,7 +634,7 @@ RSA暗号のアルゴリズムには乱数が登場しないので決定的なアルゴリズムです。
 ElGamal暗号と同じく頑強性も持っていません。
 
 1994年、Bellare, Rogawayたちはある種の関数があると、いくつかの条件のもとでIND-CCA2安全な暗号を作ることができる枠組みを提案します。
-その枠組みはOAEP（Optimal asymmetric encryption padding）と呼ばれます~\cite{HOWTOENC}。
+その枠組みはOAEP（Optimal Asymmetric Encryption Padding）と呼ばれます~\cite{HOWTOENC}。
 2004年、藤崎氏、岡本氏、Pointcheval, SternたちはOAEPが安全であることを厳密に証明します~\cite{Fujisaki:2004}。
 OAEPをRSA暗号に適用することでIND-CCA2安全な暗号RSA-OAEPを作れます。
 
