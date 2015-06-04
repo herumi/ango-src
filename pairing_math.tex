@@ -262,36 +262,39 @@ f(\Div(g))&
  =g(\Div(f))(-1)^{(\sum_i n_i)(\sum_j m_j)}=g(\Div(f)).
 \end{align*}
 \section{ペアリング}
-楕円曲線$E$上の点$P$が$m$倍して$O$になるとき$P$を$m$等分点（またはねじれ点）といい、その集合を$E[m]:=\Set{P \in E|mP=O}$と書きます。
-トーラスで考えると平行四辺形${O,\lambda_1,\lambda_1+\lambda_2,\lambda_2}$（$\lambda_1,\lambda_2\in\CC$）を縦横$m$等分した点$\Set{(i/m)\lambda_1+(j/m)\lambda_2|0 \le i, j < m}$で$m^2$個あります。
+楕円曲線$E$に対して$E[m]:=\Set{P \in E|mP=O}$とします。点$P \in E[m]$を$m$等分点（またはねじれ点）といいます。
+$\lambda_1,\lambda_2\in\CC$で定まるトーラスを考えると
+$E[m]=\Set{(i/m)\lambda_1+(j/m)\lambda_2|0 \le i, j < m}$で$m$等分点は$m^2$個あります。
 \image{mtorsion.pdf}{トーラスにおける$4$等分点の集合$E[4]$}
 有限体$\FF_p$上の楕円曲線$E$でも$m$が$p$の倍数でないとき$E[m]$は$m^2$個の元からなります。
 ただしそれらの点の座標は一般に$\FF_p$の元ではなく、その拡大体の元となります。
+
+点$P \in E[m]$に対して$D_P:=m(P)-m(O)$という因子を定義します。
+$\deg(D_P)=0$かつ$mP=O$なので定理\ref{div_func}より$\Div(f_P)=D_P$となる関数
+$f_P$が存在します。
+
 \index{ぺありんぐ@ペアリング}
-\begin{definiton}
-体$k$上の楕円曲線$E/k$と自然数$m$（$p:=\Char(k)>0$のときは$m$は$p$の倍数でないとする）をとる。
-$m$等分点の集合に対してWeilペアリング
+
+体$k$上の楕円曲線$E/k$と自然数$m$をとります。
+ただし$p:=\Char(k)>0$のときは$m$は$p$の倍数でないとします。
+Weil（ヴェイユ）ペアリング\index{Weilぺありんぐ@Weilペアリング}
 \[
 e:E[m] \times E[m] \rightarrow \overline{k}
 \]
-を次の方法で定義する：
+を次の方法で定義します。
 
-点$P$, $Q \in E[m]$に対して
-因子$D_P:=m(P)-m(O)$, $D_Q:=m(Q)-m(O)$を考える。
-$\deg(D_P)=\deg(D_Q)=0$かつ$mP=mQ=O$なので定理\ref{div_func}より、ある関数
-$f_P$, $f_Q$で$\Div(f_P)=D_P$, $\Div(f_Q)=D_Q$となるものが存在する。
+点$P, Q \in E[m]$に対して$\Div(f_P)=D_P$, $\Div(f_Q)=D_Q$となる関数をとります。
 適当な$S \in E[m]$に対して、
 \[
 e(P, Q):=\frac{f_P(Q+S)}{f_P(S)} \cdot \frac{f_Q(-S)}{f_Q(P-S)}
 \]
-とする\footnote{この定義と証明は~\cite{alex}を参考にしました。
+を$P$と$Q$のペアリングとします\footnote{この定義と証明は~\cite{alex}を参考にしました。
 ただ本書で定義されているWeierstrassの$\sigma$関数は間違っているのでご注意ください。
 正しくは
 \[
 \sigma(z)=z\prod_{\omega \in \Lambda \setminus 0}\left(1-\frac{z}{w}\right)\exp\left(\left(\frac{z}{w}\right)+\frac{1}{2}\left(\frac{z}{w}\right)^2\right).
 \]
 }。
-\end{definiton}
 \begin{theorem}
 $e(P,Q)$は$f_P$, $f_Q$, $S$のとり方に依らずに定まり、$P$, $Q$に関して双線形写像となる。
 \end{theorem}
@@ -466,8 +469,9 @@ f^{(5)}_P&=f^{(1)}_P f^{(4)}_P g_{P,4P}:=f^{(4)}_P g_{P,4P}.
 暗号への応用の観点から書かれた和書では『暗号理論と楕円曲線』~\cite{tsuji}や『代数学から学ぶ暗号理論』~\cite{miyaji}が詳しいです。
 %なお、本書ではペアリングを関数の値を求める形で定義しましたが、別の形の定義もあります。
 %\footnote{ペアリングの定義 : \url{http://homepage1.nifty.com/herumi/crypt/pairing-def.html}}
+
 ペアリングを高速に計算することは新しい暗号方式にとって非常に重要です。
-Tateペアリング~\cite{pairing-doukou}、optimal Ateペアリングなど様々な高速手法が提案されています。
+Tate（テイト）ペアリング~\cite{pairing-doukou}\index{Tateぺありんぐ@Tateペアリング}、optimal Ate（オプティマル エイト）ペアリングなど様々な方式が提案されています。
 私は2014年の時点で世界最速な実装の一つをGitHubで公開しています~\footnote{\url{https://github.com/herumi/ate-pairing/}}。
 実装方法については、またの機会に紹介しましょう。
 
