@@ -419,7 +419,7 @@ Bは秘密鍵$x$を決めて$y:=g^x \bmod{p}$を公開鍵とする。
 \epsilon:=H(\alpha, \beta, z, m), \quad e:=\epsilon-t_2 - t_4
 \]
 を計算して$e$をBに送る。
-\item Bは$c:=e-d$, $r:=u-cs$を計算しAに$(r,c,s,d)$を送る。
+\item Bは$c:=e-d$, $r:=u-cx$を計算しAに$(r,c,s,d)$を送る。
 \item Aは$\rho:=r+t_1$, $\omega:=c+t_2$, $\sigma:=s+t_3$, $\delta:=d+t_4$を計算し$(\rho,\omega,\sigma,\delta)$を$m$に対する署名とする。
 \item 署名の検証は
 \[
