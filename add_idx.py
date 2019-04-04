@@ -208,7 +208,7 @@ def addIndex(inFile):
 
 def main():
 	if len(sys.argv) != 2:
-		print "usage: add_idx.py input.tex"
+		print("usage: add_idx.py input.tex")
 	addIndex(sys.argv[1])
 
 if __name__ == '__main__':
