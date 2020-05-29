@@ -197,7 +197,7 @@ def addIndex(inFile):
 	fi.close()
 
 	for (word, furigana) in wordTbl.items():
-		r = u'%s\index{%s@%s}' % (word, furigana, word)
+		r = f'{word}\\\\index{{{furigana}@{word}}}'
 		s = re.sub('([^a-zA-Z{])' + word, '\\1' + r, s)
 	s = s.replace(u'。', u'．')
 	s = s.replace(u'、', u'，')
