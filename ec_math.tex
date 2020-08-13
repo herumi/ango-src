@@ -39,9 +39,9 @@ f(z):=\sum_{\lambda \in \Lambda}\frac{1}{(z-\lambda)^3}=\sum_{n,m \in \ZZ}\frac{
 があります。
 無限和で一見複雑です。
 ただよく見るとなるほどなと思えます。
-なぜなら$f(z+\lambda_1)$を考えると$n$の代わりに$n+1$で和をとることになるのですが、全ての$n$を動くので結局は同じ値になるからです。
+なぜなら$f(z+\lambda_1)$を考えると$n$の代わりに$n-1$で和をとることになるのですが、全ての$n$を動くので結局は同じ値になるからです。
 \[
-f(z+\lambda_1)=\sum_{n,m}\frac{1}{((z+\lambda_1)-n\lambda_1-m\lambda_2)^3}=\sum_{n'=n+1,m}\frac{1}{(z-n'\lambda_1-m\lambda_2)^3}=f(z).
+f(z+\lambda_1)=\sum_{n,m}\frac{1}{((z+\lambda_1)-n\lambda_1-m\lambda_2)^3}=\sum_{n'=n-1,m}\frac{1}{(z-n'\lambda_1-m\lambda_2)^3}=f(z).
 \]
 同様に$f(z+\lambda_2)=f(z)$となるのでこの$f$は$\Lambda$についての2重周期関数です。
 
@@ -333,7 +333,7 @@ y_3 &:= -\lambda(x_3 - x_1) - y_1.
 \end{align*}
 とすると$P+Q=(x_3,y_3)$。ただし
 \[
-\lambda := 
+\lambda :=
 \begin{cases}
 \dfrac{y_2-y_1}{x_2-x_1} & \text{($x_1 \ne x_2$)}, \\[3ex]
 \dfrac{3x_1^2+a}{2y_1} & \text{($x_1 = x_2$)}.
